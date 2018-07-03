@@ -22,40 +22,45 @@ class ChatterBotAppView(TemplateView):
         context['valor'] = 'CHATBOT'
         return context
 
-
-
-class MyLogicAdapter(LogicAdapter):
+class AdaptadorLogico(LogicAdapter):
     def __init__(self, **kwargs):
-        super(MyLogicAdapter, self).__init__(**kwargs)
+        super(AdaptadorLogico, self).__init__(**kwargs)
 
+    print ('Logic Adapter')
     def can_process(self, statement):
         """
         Return true if the input statement contains
         'what' and 'is' and 'temperature'.
         """
-        words = ['what', 'is', 'temperature']
-        if all(x in statement.text.split() for x in words):
+        words = ['Oba', 'Eita', 'Weslley'] # Pode ser passado palavras  para fazer comparação
+        # if all(x in statement.text.split() for x in words):
+        if statement.text in words:
+            ''' Se o conjunto de palavras retornar true vai ser processado o
+                Adaptador com a respostas especificas
+            '''
             return True
         else:
             return False
 
     def process(self, statement):
         from chatterbot.conversation import Statement
-        import requests
 
-        # Make a request to the temperature API
-        # response = requests.get('https://api.temperature.com/current?units=celsius')
-        # data = response.json()
+        if statement == 'Oba':
+            resposta = 'Leydson, é você?'
+            confidence = 1
 
-        # Let's base the confidence value on if the request was successful
-        # if response.status_code == 200:
-        confidence = 1
-        # else:
-        #     confidence = 0
+        if statement == 'Eita':
+            resposta = 'Lucas. é você?'
+            confidence = 1
 
-        # temperature = data.get('temperature', 'unavailable')
+        if statement == 'Weslley':
+            resposta = 'Sabião, é você?'
+            confidence = 1
 
-        response_statement = Statement('The current temperature is {}'.format('oba'))
+        else:
+            confidence = 0
+        
+        response_statement = Statement(resposta)
 
         return confidence, response_statement
 
@@ -67,7 +72,7 @@ class ChatterBotApiView(View):
 
 
 
-    chatterbot = ChatBot(**settings.CHATTERBOT,
+    bot = ChatBot(**settings.CHATTERBOT,
         logic_adapters=[
             {
                 'import_path': 'chatterbot.logic.BestMatch'
@@ -78,22 +83,11 @@ class ChatterBotApiView(View):
                 'default_response': 'Resposta invalida'
             },
             {
-                'import_path': 'example_app.views.MyLogicAdapter'
+                'import_path': 'example_app.views.AdaptadorLogico'
             }
         ],
     )
-    # chatterbot = ChatBot(
-    #     'T.A.R.S',
-    #     read_only=False,
-    #     trainer='chatterbot.trainers.ChatterBotCorpusTrainer',
-    #     preprocessors=[
-    #         'chatterbot.preprocessors.clean_whitespace',
-    #         'chatterbot.preprocessors.unescape_html',
-    #         'chatterbot.preprocessors.convert_to_ascii',
-    #     ],
-    #     )
-    # chatterbot.train('chatterbot.corpus.leme')
-    # bot.tr
+
     def get_conversation(self, request):
         """
         Return the conversation for the session if one exists.
@@ -158,7 +152,7 @@ class ChatterBotApiView(View):
         # print ('input_data', input_data)
 
         conversation = self.get_conversation(request)
-        response = self.chatterbot.get_response(input_data)
+        response = self.bot.get_response(input_data)
         # if float(response.confidence) > 0.5:
         response_data = response.serialize()
         # else:
