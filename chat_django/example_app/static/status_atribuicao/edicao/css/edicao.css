@@ -1,0 +1,19 @@
+.ui-dialog-buttonset {
+	width: 99%;
+}
+[name=selecionar-todas] {
+	margin: 3px 0px !important;
+}
+.table thead tr th span input[type=checkbox].ace {
+	margin: 3px 18px;
+}
+.table thead tr th span input[type=checkbox].ace + .lbl::before {
+	display: inline-table;
+}
+.ui-dialog textarea {
+	max-height: 50px;
+	max-width: 100%;
+}
+.popover {
+	left: 0 !important;
+}

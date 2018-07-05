@@ -1,0 +1,22 @@
+.form-colaboradores {
+    clear: both;
+}
+.f_botoes, .row .btn-group , .multiselect-container.dropdown-menu{
+		  width: 100%;
+		}
+#envio_form .multiselect-container.dropdown-menu {
+    z-index: 9999!important;
+    position: absolute!important;
+}
+#div_id_colaboradores .multiselect-container.dropdown-menu {
+    display: block;
+}
+#div_id_tipo{
+    margin-top: -10px!important;
+}
+
+.multiselect + .multiselect-container {
+    height: 300px;
+    overflow-y: auto;
+    position: absolute!important;
+}

@@ -1,0 +1,74 @@
+.f_botoes,
+.row .btn-group,
+.multiselect-container.dropdown-menu {
+    width: 100%;
+}
+
+.form_data .multiselect-container.dropdown-menu {
+    z-index: 9999!important;
+    position: absolute!important;
+}
+
+#div_id_colaboradores .multiselect-container.dropdown-menu {
+    display: block;
+}
+
+.multiselect+ .multiselect-container {
+    height: 300px;
+    overflow-y: auto;
+    position: absolute!important;
+}
+
+.margin-top {
+    margin-top: 10px;
+}
+
+.no_back {
+    background: transparent !important;
+}
+
+
+/* Esquema de Hiddens */
+@media (max-width: 543px) {
+.hidden-xs-down {
+    display: none !important;
+}
+}
+@media (min-width: 544px) {
+.hidden-sm-up {
+    display: none !important;
+}
+}
+@media (max-width: 767px) {
+.hidden-sm-down {
+    display: none !important;
+}
+}
+@media (min-width: 768px) {
+.hidden-md-up {
+    display: none !important;
+}
+}
+@media (max-width: 991px) {
+.hidden-md-down {
+    display: none !important;
+}
+}
+@media (min-width: 992px) {
+.hidden-lg-up {
+    display: none !important;
+}
+}
+@media (max-width: 1199px) {
+.hidden-lg-down {
+    display: none !important;
+}
+}
+@media (min-width: 1200px) {
+.hidden-xl-up {
+    display: none !important;
+}
+}
+.hidden-xl-down {
+    display: none !important;
+}

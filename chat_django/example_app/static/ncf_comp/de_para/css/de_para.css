@@ -1,0 +1,34 @@
+.ui-dialog > div > form,
+.ui-dialog > div > form > fieldset,
+.ui-dialog > div > form > fieldset p {
+    margin: 0 auto;
+}
+.ui-dialog > .ui-dialog-buttonpane > .ui-dialog-buttonset {
+    width: 98%;
+    margin: 0 auto;
+}
+.ui-dialog > .ui-dialog-buttonpane > .ui-dialog-buttonset > button:first-child {
+    float: left;
+}
+.ui-dialog > .ui-dialog-buttonpane > .ui-dialog-buttonset > button:first-child ~ button {
+    float: right;
+}
+.ui-dialog .ms-container {
+    margin: 10px 0;
+    width: 99%;
+}
+.ui-dialog .ms-container > .ms-selectable > ul > li {
+    width: 100%;
+    overflow: hidden;
+}
+.ui-dialog .ms-container > .ms-selection > ul > li {
+    width: 100%;
+}
+.ui-dialog .ms-container > .ms-selection > ul,
+.ui-dialog .ms-container > .ms-selectable > ul{
+    overflow-x: hidden;
+}
+.ui-dialog .ms-container > .ms-selection > ul > li,
+.ui-dialog .ms-container > .ms-selectable > ul > li{
+    text-align: left;
+}

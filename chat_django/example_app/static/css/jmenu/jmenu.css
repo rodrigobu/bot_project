@@ -1,0 +1,102 @@
+#main_menu_div {
+    margin: 0 auto 3px;
+    text-align: left;
+    width: 960px;
+    padding-left: 15px;
+}
+
+#main_menu {
+	text-align: left;
+}
+
+.jMenu {
+    display: table;
+}
+
+/* PRIMEIRO NÍVEL (MÓDULOS) */
+
+.jMenu>li {
+    background-color: transparent;
+    float: left;
+    margin: 0;
+    padding-left: 10px;
+    height: 47px;
+}
+
+.jMenu>li>a {
+    cursor: pointer;	
+    color: #FFF;    
+    border-bottom: 2px solid transparent;
+    text-shadow: 1px 0 1px #555555;
+    text-transform: uppercase;
+	font-weight: bold;  
+	margin-left: 10px;
+	font-size: 8px;	
+}
+
+.jMenu>li>a>span{
+	display: block;	
+    float: left;	
+    clear: both;
+    min-width: 25px; 
+    text-align: center; 
+	height: auto; 
+    padding-top: 28px; 
+    margin-top: 5px;
+}
+
+.jMenu> li>a>span:hover, .jMenu>li.modulo_atual>a>span {
+	border-bottom: 1.5px solid #FFF;
+}
+
+
+/* NÍVEIS INFERIORES (SUB-ITENS) */
+
+.jMenu li a img.img_menu {
+    height: 15px;
+    width: 15px;
+    
+}
+
+.jMenu>li ul {
+    position: absolute;
+    z-index:9999;
+    margin-left: -8px;
+}
+
+.jMenu>li ul li {
+    display: block;
+    background-color: white;
+    padding: 6px;
+    border-right: 1px solid #DBDBDB;
+    border-bottom: 1px solid #DBDBDB;
+    border-left: 1px solid #DBDBDB;
+}
+.jMenu>li ul li.primeiroItem {
+    border-top: 1px solid #DBDBDB;
+}
+
+.jMenu .isParent .arrow {
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 6px;
+    float: right;
+}
+
+.jMenu>li ul li a {
+    display: block;
+    text-align: left;
+    font-size: 10px;
+    font-weight: normal;
+    color: black;
+}
+
+.jMenu>li ul li a span {
+    padding: 4px;
+}
+
+.jMenu>li ul li:hover {
+    border-bottom: 2px solid #DBDBDB;
+    background-color: #EAEAEA;
+}
+

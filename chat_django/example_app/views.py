@@ -7,14 +7,14 @@ from django.views.generic import View
 from django.http import JsonResponse
 
 from chatterbot import ChatBot
-from chatterbot.utils import input_function
+from chatterbot.utils import input_function, get_response_time
 from chatterbot.logic import LogicAdapter
 from chatterbot.ext.django_chatterbot import settings
 
 
 
 class ChatterBotAppView(TemplateView):
-    template_name = 'app.html'
+    template_name = 'chat.html'
 
 
     def get_context_data(self, **kwargs):
@@ -26,7 +26,6 @@ class AdaptadorLogico(LogicAdapter):
     def __init__(self, **kwargs):
         super(AdaptadorLogico, self).__init__(**kwargs)
 
-    print ('Logic Adapter')
     def can_process(self, statement):
         """
         Return true if the input statement contains
@@ -59,7 +58,7 @@ class AdaptadorLogico(LogicAdapter):
 
         else:
             confidence = 0
-        
+
         response_statement = Statement(resposta)
 
         return confidence, response_statement
@@ -70,23 +69,40 @@ class ChatterBotApiView(View):
     """
     logging.basicConfig(level=logging.INFO)
 
+    bot = ChatBot(
+            **settings.CHATTERBOT,
+            read_only = True, # Quando read_only estiver FALSE, ele vai estar no modo treino
+            preprocessors = [
+                'chatterbot.preprocessors.clean_whitespace', # Para remover espaço excessivos
+                'chatterbot.preprocessors.unescape_html',# Converte carateres para html
+                'chatterbot.preprocessors.convert_to_ascii', # Converte unicode para ascii
+            ],
 
+            logic_adapters = [
+                # Adaptador logico, para respostas especificas.
+                {
+                    'import_path': 'chatterbot.logic.SpecificResponseAdapter',
+                    'input_text': 'Help me!',
+                    'output_text': 'Ok, here is a link: http://chatterbot.rtfd.org'
+                },
 
-    bot = ChatBot(**settings.CHATTERBOT,
-        logic_adapters=[
-            {
-                'import_path': 'chatterbot.logic.BestMatch'
-            },
-            {
-                'import_path': 'chatterbot.logic.LowConfidenceAdapter',
-                'threshold': 0.7,
-                'default_response': 'Resposta invalida'
-            },
-            {
-                'import_path': 'example_app.views.AdaptadorLogico'
-            }
-        ],
-    )
+                # Adaptador logico, para trazer a melhor resposta
+                {
+                    'import_path': "chatterbot.logic.BestMatch",
+                    "statement_comparison_function": "chatterbot.comparisons.levenshtein_distance",
+                    "response_selection_method": "chatterbot.response_selection.get_first_response"
+                },
+
+                # Setar respostas de baixa confiança, verfica se a resposta tem um confiabilidade aceitavel,
+                # Senão retonar uma resposta default.
+                {
+                    'import_path': 'chatterbot.logic.LowConfidenceAdapter',
+                    'threshold': 0.7,
+                    'default_response': 'Malz ae man'
+                },
+            ],
+        )
+
 
     def get_conversation(self, request):
         """
@@ -100,18 +116,17 @@ class ChatterBotApiView(View):
                 self.statements = []
 
         conversation = Obj()
+
         # conversation.id = request.session.get('conversation_id', 0)
-        print ('resquest', request)
         # existing_conversation = False
         # try:
-            # Conversation.objects.get(id=conversation.id)
+        print ('Conversation',Response.objects.all())
         existing_conversation = True
 
         # except Conversation.DoesNotExist:
         #     conversation_id = self.chatterbot.storage.create_conversation()
         #     request.session['conversation_id'] = conversation_id
         #     conversation.id = conversation_id
-
         if existing_conversation:
             responses = Response.objects.filter(
                 conversations__id=conversation.id
@@ -130,7 +145,7 @@ class ChatterBotApiView(View):
         conversation = self.get_conversation(request)
         valor = 'CHATBOT'
         return JsonResponse({
-            'BOT': self.chatterbot.name,
+            'BOT': self.bot.name,
             'conversation': conversation.statements
         })
 

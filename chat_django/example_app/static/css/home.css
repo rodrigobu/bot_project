@@ -1,0 +1,68 @@
+.ace-thumbnails > li {
+	border: none;
+}
+
+.badge-phase {
+	margin-right: 5px;
+}
+.badge-check {
+	background-color: #1E6635 !important
+}
+
+.label-main {
+	font-size: 16px;
+	height: 100px;
+}
+.label-main-icon {
+	font-size: 30px;
+}
+
+.label-main2 {
+	font-size: 20px;
+}
+.locate-main {
+	margin-top: 20px;
+}
+.badge {
+	border-radius: 80px;
+}
+
+#main {
+	margin-top: 25px;
+}
+
+#main span {
+	font-size: 18px;
+}
+
+#main span.label {
+	padding-top: 10px;
+	height: 50px;
+}
+
+#main span.label.label-xlg.arrowed-right:after {
+	border-width: 25px 6px;
+}
+
+.infobox-stage-container .infobox > .infobox-data > .infobox-stage-number {
+	font-size: 20px;
+}
+
+.infobox-stage-container {
+	text-align: left;
+}
+.infobox-stage {
+	width: auto;
+}
+
+.infobox-stage-main {
+	border: none;
+	width: auto;
+	height: auto;
+}
+
+.infobox-icon-current-stage {
+	display: inline-block;
+	vertical-align: top;
+	width: 100px;
+}

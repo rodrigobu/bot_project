@@ -1,6 +1,6 @@
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-
+from os import path as ospath
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -34,15 +34,9 @@ INSTALLED_APPS = (
 
 CHATTERBOT = {
     'name': 'JARVAS',
-    'read_only': 'True',
     'trainer': 'chatterbot.trainers.ChatterBotCorpusTrainer',
     'training_data': [
-        'chatterbot.corpus.leme'
-    ],
-    'preprocessors': [
-        'chatterbot.preprocessors.clean_whitespace',
-        'chatterbot.preprocessors.unescape_html',
-        'chatterbot.preprocessors.convert_to_ascii',
+        '/home/rodrigo/sistemas/rodrigo/chat/chatbot/textos'
     ],
 
 }
@@ -113,10 +107,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
-
+PROJECT_EXTERNAL = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 STATICFILES_DIRS = (
-    os.path.join(
-        os.path.dirname(__file__),
-        'static',
-    ),
+    os.path.join(PROJECT_EXTERNAL, 'spa-static/static/'),
+    os.path.join(PROJECT_EXTERNAL, "global_static/html/static/"),
 )
+
+PROJECT_ROOT = ospath.dirname(ospath.realpath(__file__))
+MEDIA_ROOT = ospath.join(PROJECT_ROOT, 'media')
+MEDIA_URL = '/media/'

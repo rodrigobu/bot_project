@@ -1,0 +1,13 @@
+/*Questionario*/
+/*header questionario*/
+#leftheader #div_top_text #counter{
+	font-weight: bold;
+    font-size: 12px;
+    color: #544F4F;
+    display: block;
+}      
+
+
+#contents_quest .large_title{
+	font-size: 22px;
+}

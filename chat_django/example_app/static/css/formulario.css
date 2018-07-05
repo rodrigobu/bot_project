@@ -1,0 +1,49 @@
+
+.ms-selectable .ms-list{
+    position: relative;
+    left: 10px;
+    width: 300px;
+}
+
+.controls{
+    width:40%;
+}
+
+.ms-selection .ms-list, .ms-selection .custom-header {
+    position: relative;
+    left: 172px;
+    width: 300px;
+    top: -1px;
+}
+
+.custom-header {
+    position: relative;
+    left: 10px;
+    top: -1px;
+}
+
+#submit-id-bt_salvar {
+    position: relative;
+    left: 668px;
+}
+#button-id-bt_cancelar{
+    position: relative;
+    left: 211px;
+}
+
+#deselect_tds_func {
+    position: relative;
+    left: 518px;
+    top: -200px;
+}
+
+#select_tds_func {
+    position: relative;
+    left: 534px;
+    top: -237px;
+}
+
+#div_id_responsavel_funcao {
+    position: relative;
+    left: 19%;
+}

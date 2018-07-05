@@ -1,0 +1,102 @@
+/*
+ * Este arquivo contém apenas css de botões.
+ */
+
+form input.botao, a.botao{
+    font: 12px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    border: 1px solid #D1D1D1;
+    padding: 3px;
+    background: white;
+    margin: 0.5% 10px 0px 10px;
+    float:right;
+    cursor: pointer;
+    color: white;
+    background: url("{{ STATIC_URL }}imagem/botao.png") repeat-x center;
+}
+
+form input.botaoEsq, a.botaoEsq{
+    float:left;
+}
+
+form input.botDir, a.botDir, button.botDir{
+	float: right;	
+}
+
+form input.botaoExcluir, button.botao_sec{
+    background-color: #EFEFEF;
+    border: 1px solid #D1D1D1;
+    padding: 3px;
+    cursor: pointer;
+    color: #5F5F5F;
+}
+
+span.buscar{
+    float:right;
+    cursor:pointer;
+    height:20px;
+    margin-top:2px;
+    margin-left:5px;
+    width:20px;
+    background: url("{{ STATIC_URL }}images/buscar.jpg") no-repeat right center;
+    background-size: 100% 100%;
+}
+
+form fieldset.f_botoes{
+	margin-right: 10px;
+	clear: both;
+}
+
+/* botoes de salvar, excluir e sair */
+form input.botaomedio, a.botaomedio, button.botaomedio {
+    padding: 0.4em 1em;
+    cursor:pointer;
+    margin-left: 3px;
+    width: 100px
+}
+form input.botaog, a.botaog, button.botaog {
+    padding: 0.4em 1em;
+    cursor:pointer;
+    margin-left: 3px;
+    width: 140px
+}
+form input.botaogg, a.botaogg, button.botaogg {
+    padding: 0.4em 1em;
+    cursor:pointer;
+    margin-left: 3px;
+    width: 200px
+}
+
+/* lista de botão float:left */
+ul.listbotoes { height:50px; float:right; clear:both; }
+ul.listbotoes li { float:left; margin:5px; margin-right:10px; }   
+
+/* Botões padrão */ 
+
+form input.defButton, a.defButton, div.divAlert a.defButton {
+    font: bold 11px Verdana, arial;
+    text-decoration:none;       
+    color:black;
+    cursor:pointer;    
+    outline:none;
+}
+
+form input.basicButton, a.basicButton{
+    background:url("{{ STATIC_URL }}images/fundobot.gif") 0 0;
+    border:1px solid black;
+    padding:5px 10px;
+    /* Para o IE 7 */
+    *padding: 3px;    
+}
+
+a.defButton{
+    /* Para o IE 7 */    
+    *padding: 5px;
+}
+
+form input.buttonRight, a.buttonRight{
+  float: right
+  }
+  
+form input.buttonLeft, a.buttonLeft{
+  float: left
+  }

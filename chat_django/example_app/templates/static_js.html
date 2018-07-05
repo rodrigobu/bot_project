@@ -1,0 +1,106 @@
+{% load i18n %}
+{% load static %}
+<script src='{% static 'js/jquery/jquery-2.2.4.min.js' %}'></script>
+<script src='{% static 'js/jquery/jquery-ui.min.js' %}'></script>
+<script src='{% static 'js/forms/csrf.js' %}'></script>
+<script src='{% static 'js/bootstrap.min.js' %}'></script>
+<script src='{% static 'js/xenon/TweenMax.min.js' %}'></script>
+<script src='{% static 'js/xenon/resizeable.js' %}'></script>
+<script src='{% static 'js/xenon/joinable.js' %}'></script>
+<script src='{% static 'js/xenon/xenon-api.js' %}'></script>
+<script src='{% static 'js/xenon/xenon-toggles.js' %}'></script>
+<script src='{% static 'js/xenon/xenon-custom.js' %}'></script>
+<script src='{% static 'js/alertas/bootbox.min.js' %}'></script>
+<script src='{% static 'js/alertas/dialogs.js' %}'></script>
+<script src='{% static 'js/alertas/ajax.js' %}'></script>
+<script src='{% static 'js/carregando/jquery.blockUI.js' %}'></script>
+<script src='{% static 'js/carregando/carregando.js' %}'></script>
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/js.cookie.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script>
+  var chatterbotUrl = '{% url "chatterbot" %}';
+  var csrftoken = Cookies.get('csrftoken');
+  var date = new Date().toLocaleString();
+
+  function csrfSafeMethod(method) {
+    // these HTTP methods do not require CSRF protection
+    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+  }
+
+  $.ajaxSetup({
+    beforeSend: function(xhr, settings) {
+      if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+        xhr.setRequestHeader("X-CSRFToken", csrftoken);
+      }
+    }
+  });
+
+  var $chatlog = $('.js-chat-log');
+  var $input = $('.js-text');
+  var $sayButton = $('.js-say');
+
+  function createRowUsuario(text) {
+    var message = '<li class="">'
+    + '<div class="message-entry container_chat">'
+    + '<img src="static/inhegas.jpg" width="40" height="40" style="margin-top: -5px;" alt="Avatar" class="right" />'
+    + `<p>${text}</p>`;
+    + '</div>';
+    + '</li>';
+
+
+    $chatlog.append(message);
+  }
+
+  function createRowBot(text) {
+    var message = '<li class="">'
+    + '<div class="message-entry container_chat branco">'
+    + '<img src="static/images.png" width="40" height="40" style="margin-top: -5px;" alt="Avatar" class="left" />'
+    + `<p>${text}</p>`;
+    + '</div>';
+    + '</li>';
+
+
+    $chatlog.append(message);
+  }
+
+  function submitInput() {
+    var inputData = {
+      'text': $input.val()
+    }
+    // Display the user's input on the web page
+    createRowUsuario(inputData.text);
+
+    var $submit = $.ajax({
+      type: 'POST',
+      url: chatterbotUrl,
+      data: JSON.stringify(inputData),
+      contentType: 'application/json'
+    });
+
+    $submit.done(function(statement) {
+        createRowBot(statement.text);
+
+        // Clear the input field
+        $input.val('');
+
+        // Scroll to the bottom of the chat interface
+        $chatlog[0].scrollTop = $chatlog[0].scrollHeight;
+    });
+
+    $submit.fail(function() {
+      // TODO: Handle errors
+    });
+  }
+
+  $sayButton.click(function() {
+    submitInput();
+  });
+
+  $input.keydown(function(event) {
+    // Submit the input when the enter button is pressed
+    if (event.keyCode == 13) {
+      submitInput();
+    }
+  });
+</script>

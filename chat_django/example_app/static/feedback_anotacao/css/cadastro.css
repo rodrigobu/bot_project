@@ -1,0 +1,18 @@
+label {
+  position: relative;
+  cursor: pointer;
+}
+
+label [type="radio"].feedback {
+  display: none;
+}
+
+[type="radio"]+span {
+  display: inline-block;
+  /*padding:1em;*/
+}
+
+:checked+span {
+  background: #DCDCDC;
+  display: inline-block;
+}

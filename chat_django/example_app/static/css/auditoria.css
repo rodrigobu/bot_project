@@ -1,0 +1,29 @@
+.dd-handle,
+.dd-handle > .inline {
+    cursor: pointer;
+}
+.dd-handle > .inline {
+    width: 80%;
+}
+.ui-dialog-titlebar-close {
+    top: 42% !important;
+}
+.ui-dialog .ui-dialog-buttonset {
+    width: 98.5%;
+}
+.ui-dialog .fa.fa-spinner.fa-spin {
+    bottom: 0;
+    padding: 0;
+    top: -31px;
+    right: 26px;
+    z-index: 999;
+    float: right;
+    color: black;
+    display: none;
+    line-height: 0.2;
+    position: relative;
+}
+#div_id_associar_compt label,
+#div_id_associar_indicador label {
+    display: none;
+}

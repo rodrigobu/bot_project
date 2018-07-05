@@ -1,0 +1,20 @@
+
+thead, tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+tbody {
+    display: block;
+    max-height: 400px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+table, th, td {
+    border: none!important;
+    border-collapse: collapse;
+}

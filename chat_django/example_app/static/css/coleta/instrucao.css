@@ -1,0 +1,13 @@
+/*Instrucao*/
+.instrucao .large_title{
+	font: bold 20px Arial, Tahoma, Sans-Serif;
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
+.instrucao .medium_title{
+	font: 16px Arial, Tahoma, Sans-Serif;
+    display: block;
+    text-align: center;
+    padding: 10px;
+}

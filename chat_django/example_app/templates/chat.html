@@ -1,0 +1,120 @@
+{% load i18n %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Xenon Boostrap Admin Panel" />
+	<meta name="author" content="" />
+
+	<title>CHATBOT</title>
+
+
+	{% include "static_css.html" %}
+
+</head>
+<body class="page-body">
+
+	<div class="footer-sticked-chat"><!-- Start: Footer Sticked Chat -->
+		<ul class="chat-conversations list-unstyled">
+			<li id="sample-chat-window">
+			    <a href="#"  class="chat-user">
+				   <span class="user-status is-online"></span>
+			    		CHATBOT
+			     </a>
+			      	<!--<span class="badge badge-purple">4</span>-->
+			      <div class="conversation-window">
+			  <!-- User Info Link in header (used to close the chat bar) -->
+			        <a href="#"  class="chat-user">
+			          <!-- <span class="close">&times;</span> -->
+			        	<span class="user-status is-online"></span>
+			          CHATBOT
+			        </a>
+			      <ul class="conversation-messages ps-scrollbar ps-scroll-down list-group chat-log js-chat-log"></ul>
+				    <input type="text" class="form-control js-text"  placeholder="Digite sua mensagem..." />
+			  </div>
+			</li>
+		</ul>
+	<!-- End: Footer Sticked Chat -->
+	</div>
+
+
+{% include "static_js.html" %}
+
+  <script type="text/javascript">
+		function toggleSampleChatWindow()
+		{
+			var $chat_win = jQuery("#sample-chat-window");
+
+			$chat_win.toggleClass('open');
+
+			if($chat_win.hasClass('open'))
+			{
+				var $messages = $chat_win.find('.ps-scrollbar');
+
+				if($.isFunction($.fn.perfectScrollbar))
+				{
+					$messages.perfectScrollbar('destroy');
+
+					setTimeout(function(){
+						$messages.perfectScrollbar();
+						$chat_win.find('.form-control').focus();
+					}, 300);
+				}
+			}
+
+			jQuery("#sample-chat-window form").on('submit', function(ev)
+			{
+				ev.preventDefault();
+			});
+		}
+
+		jQuery(document).ready(function($)
+		{
+			$(".footer-sticked-chat .chat-user, .other-conversations-list a").on('click', function(ev)
+			{
+				ev.preventDefault();
+				toggleSampleChatWindow();
+			});
+
+			$(".mobile-chat-toggle").on('click', function(ev)
+			{
+				ev.preventDefault();
+
+				$(".footer-sticked-chat").toggleClass('mobile-is-visible');
+			});
+		});
+		</script>
+    <script type="text/javascript">
+    // Here is just a sample how to open chat conversation box
+    jQuery(document).ready(function($)
+    {
+      var $chat_conversation = $(".chat-conversation");
+
+      $(".chat-group a").on('click', function(ev)
+      {
+        ev.preventDefault();
+
+        $chat_conversation.toggleClass('is-open');
+
+        $(".chat-conversation textarea").trigger('autosize.resize').focus();
+      });
+
+      $(".conversation-close").on('click', function(ev)
+      {
+        ev.preventDefault();
+        $chat_conversation.removeClass('is-open');
+      });
+    });
+    </script>
+
+
+	<!-- Bottom Scripts -->
+
+
+
+</body>
+</html>

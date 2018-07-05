@@ -1,0 +1,71 @@
+.bootbox.dialog-alert .bootbox-close-button,
+.bootbox.dialog-error .bootbox-close-button,
+.bootbox.dialog-success .bootbox-close-button,
+.bootbox.dialog-confirm .bootbox-close-button {
+    display: none;
+}
+.bootbox.dialog-info .modal-body .bootbox-close-button.close {
+    z-index: 5;
+    position: relative;
+    margin-top: 5px !important;
+}
+.bootbox.dialog-alert .ace-icon:first-child,
+.bootbox.dialog-error .ace-icon:first-child,
+.bootbox.dialog-success .ace-icon:first-child,
+.bootbox.dialog-confirm .ace-icon:first-child,
+.bootbox.dialog-info .ace-icon:first-child {
+    float: left;
+    font-size: 40px;
+}
+.bootbox.dialog-alert .bootbox-body .text,
+.bootbox.dialog-error .bootbox-body .text,
+.bootbox.dialog-success .bootbox-body .text,
+.bootbox.dialog-confirm .bootbox-body .text,
+.bootbox.dialog-info .bootbox-body .text {
+    top: 10px;
+    left: 20px;
+    position: relative;
+}
+.bootbox.dialog-info .modal-body {
+    padding-bottom: 40px;
+}
+.dialog-info > .modal-dialog > .modal-content {
+    background-color: #d9edf7;
+        border-color: #bce8f1;
+        color: #31708f;
+}
+.dialog-info > .modal-dialog > .modal-content .modal-header,
+.dialog-info > .modal-dialog > .modal-content .modal-footer {
+    background-color: #d9edf7;
+        border-color: #bce8f1;
+}
+.dialog-alert > .modal-dialog > .modal-content {
+    background-color: #FCF8E3;
+        border-color: #FAEBCC;
+               color: #8A6D3B;
+}
+.dialog-alert > .modal-dialog > .modal-content .modal-header,
+.dialog-alert > .modal-dialog > .modal-content .modal-footer {
+    background-color: #FCF8E3;
+        border-color: #FAEBCC;
+}
+.dialog-success > .modal-dialog > .modal-content {
+    background-color: #dff0d8;
+        border-color: #d6e9c6;
+               color: #3c763d;
+}
+.dialog-success > .modal-dialog > .modal-content .modal-header,
+.dialog-success > .modal-dialog > .modal-content .modal-footer {
+    background-color: #dff0d8;
+        border-color: #d6e9c6;
+}
+.dialog-error > .modal-dialog > .modal-content {
+    background-color: #f2dede;
+        border-color: #ebccd1;
+               color: #a94442;
+}
+.dialog-error > .modal-dialog > .modal-content .modal-header,
+.dialog-error > .modal-dialog > .modal-content .modal-footer {
+    background-color: #f2dede;
+        border-color: #ebccd1;
+}

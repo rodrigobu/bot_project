@@ -1,0 +1,62 @@
+.controls {
+	margin-right: 15px;
+}
+.bt_hide, .bt_hide_setor, .bt_hide_sub {
+	float: left !important;
+	margin-left: -20px !important;
+	margin-right: 2px !important;
+	padding-left: 1px !important;
+	padding-right: 1px !important;
+	cursor: pointer !important;
+}
+.ms-selectable .ms-list {
+	position: relative;
+	left: 10px;
+	width: 300px;
+}
+
+.ms-selection .ms-list, .ms-selection .custom-header {
+	position: relative;
+	left: 172px;
+	width: 300px;
+	top: -1px;
+}
+
+.custom-header {
+	position: relative;
+	left: 10px;
+	top: -1px;
+}
+#deselect_tds_func {
+	position: relative;
+	left: 335px;
+	top: -170px;
+}
+
+#select_tds_func {
+	left: 320px;
+	position: relative;
+	top: -207px;
+}
+
+#div_id_responsavel_funcao {
+	position: relative;
+	left: 19%;
+}
+.check_excluir {
+	float: right !important
+}
+
+#div_grid_tabela{
+	margin-top:5px!important; 
+	height: 310px !important; 
+	overflow: scroll !important; 
+	overflow-x: hidden!important;
+}
+.borda_bottom{
+	border-bottom: 1px solid rgb(229, 229, 229); 
+	margin-bottom: 10px; 
+	margin-left: 12px; 
+	padding-left: 0px; 
+	padding-bottom:10px;
+}

@@ -1,0 +1,13 @@
+.img-responsive { 
+	max-width: 98%; 
+	height: auto; 
+ }
+.img-responsive  img{
+      max-width: 98%;
+      max-height: 100%;  /* Máximo da altura da imagem */
+      height: auto;      /* Mínimo da altura, por padrão “auto” */}   
+           	
+.img-responsive  img.logo_login{
+      max-width: 375px;   /* Máximo da largura da imagem */
+      max-height: 100px;  /* Máximo da altura da imagem */     
+  }           	

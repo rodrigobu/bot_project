@@ -1,0 +1,372 @@
+body{
+    border: 0;
+    /*overflow-y: hidden;*/
+    _overflow-y: None;
+    padding: 0px;
+    border-top: 12px solid #438eb9;
+    background-color:#FFFFFF;
+}
+
+/*Header
+#header{
+	height: auto;
+	overflow: hidden; /*Disable scrollbars. Set to "scroll" to enable
+}
+*/
+
+#header{
+    background: #F5F5F5;
+    border-bottom: 1px solid #d5d5d5;
+}
+
+#header #rightheader{
+    float: right;
+/*
+    margin-left: 70px;
+    margin-right: 270px;
+    height: 40px;
+    width: 200px;
+*/
+}
+
+#header #leftheader{
+    padding: 15px 0px 0px 10px;
+    float: left;
+    border-right: 1px solid #eee;
+    padding-right: 31px;
+    margin-top: 29px;
+}
+
+#header #leftheader #div_top_text{
+	margin-top: 15px;
+	clear: left;
+	/*margin-right: 270px;*/
+}
+
+#header #leftheader #div_top_text hr{
+    border: 1px solid #544F4F;
+    background-color: #544F4F;
+    margin:3px 0;
+    width: 100%;
+    /*Para o IE7*/
+    *margin-top: 0px;
+}
+
+#header ul#menu, #header ul#small_menu{
+	float: right;
+	list-style:none;
+}
+
+#header ul#small_menu{
+	width: auto;
+    margin: 20px 15px 0 0;
+}
+
+#header ul#small_menu li a{
+	color:#333;
+	font-size: 12px;
+	text-decoration: none;
+	display: block;
+}
+
+#header ul#small_menu li a#instruction{
+	background: url("/static/images/coleta/Infop.png") no-repeat left center;
+}
+
+#header ul#small_menu li a#selectFunc{
+    background: url("/static/images/coleta/editp.png") no-repeat left center;
+}
+
+#header ul#small_menu li a#logout{
+    margin-left: 3px;
+    background: url("/static/images/coleta/Logoutp.png") no-repeat left center;
+}
+
+#header ul#small_menu li a#portalHome{
+    background: url("/static/images/coleta/home_iconp.png") no-repeat left center;
+}
+
+/*Header - Logo*/
+#header #small_logo{
+    float: right;
+    /*
+    top: 1.4%;
+    position: absolute;
+    right: 0;
+    -moz-box-shadow: -5px 5px 5px 5px #888;
+	-webkit-box-shadow: -5px 5px 5px 5px #888;
+	box-shadow: -5px 5px 5px 5px #888;
+    */
+}
+
+#header #small_logo h1 img{
+      margin:0px 5px;
+}
+
+/*Home-Menu Perspectivas*/
+.menu-info{
+	margin-top:10px;
+}
+.menu-info span{
+	font-size:15px;
+}
+
+/*Body*/
+#contents-body{
+	padding: 20px 10px;
+}
+
+#contents-body .contents-aval{
+	padding: 0 10px;
+}
+
+#contents-body .contents-aval .panel-title{
+	font: bold 18px;
+}
+
+#contents-body .contents-aval .panel-text{
+	font: 16px;
+	margin: 15px 0px;
+}
+
+#contents-body .contents-aval #fix_bottom_contents{
+    margin: 15px 0;
+}
+
+/*Footer*/
+.footer-coleta{
+	left: 0!important;
+}
+
+/* css button */
+.btn-circle {
+-webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   font-weight:bold;
+}
+
+/* css títulos*/
+span.title, p.title, div.title{
+  	font: bold 14px;
+}
+span.subtitle, p.subtitle{
+	font: 14px;
+}
+p.large_title{
+    font: bold 20px;
+    display: block;
+    text-align: center;
+    padding: 10px;
+  }
+
+p.medium_title{
+    font: bold 14px;
+    display: block;
+    text-align: center;
+    padding: 10px;
+  }
+
+/* textos simples */
+p.texto{
+  display: block;
+  float: none;
+  }
+
+p.text_m{
+	font-size: 14px;
+}
+
+span.legenda{
+  font-size: 9px;
+  }
+
+div.ui-dialog-titlebar span{
+	font-weight: bold;
+}
+.ui-dialog p, .ui-dialog span{
+	font-size:14px;
+}
+
+/* fieldsets */
+form fieldset.fBox{
+    padding-top:15px;
+    padding-bottom:15px;
+}
+
+form fieldset.fContainer{
+    margin-top: 20px;
+    padding-left: 5px; padding-right: 5px;
+}
+
+/* css lista de erro */
+
+ul.errorlist{
+  display: block;
+  margin-top: 15px;
+  padding: 5px 2px 5px 15px;
+  }
+
+ul.errorlist li {
+    color: #a33;
+    font: bold 10px;
+    font-weight: bold;
+}
+
+/* ncf tec bordar para competencia sem resposta */
+.error {
+  border: 1px solid red;
+  background-color: red;
+  margin:3px 0 2px 0;
+}
+
+/* avalr bordas para competencias sem resposta, vermelha */
+.errorBorder {
+  border: 3px solid red;
+}
+
+/* tabelas gerais */
+table {
+    border-collapse:collapse;
+    width: 100%;
+    clear: both;
+}
+
+table tr th{
+    font: 15px;
+    padding: 5px;
+    text-align: left;
+    border-right:1px solid white;
+    border-bottom:2px solid white;
+    background-color:#CFD5DF;
+    font-weight: 500;
+}
+table tr th.cabecalho{
+  background: #FFF url("/static/images/fundobot.gif") 0 0;
+  border-bottom:2px solid white;
+}
+table tr td{
+    font: 15px ;
+    padding: 5px;
+    border-bottom: 2px solid white;
+    color: black
+}
+
+table tr td a{
+  font: 15px ;
+  text-decoration: none;
+  color: black;
+ }
+
+table tr td img{
+  margin-right: 5px;}
+
+table tr.impar td {background:#EFEFEF;}
+
+table tr.par td {background:#FFFFFF;}
+
+/*table tr th.titescala{font-size: 15px}*/
+
+table tr td.centralizado, table tr th.centralizado{
+    text-align: center;
+}
+
+table tr td.centralizado select, table tr th.centralizado{
+    text-align: center;
+}
+
+table tr td.inputCental input, table tr td.inputCental img{
+    margin-left: 40px;
+}
+
+table tr.noborder td{
+    border: none;
+}
+
+table.sel{
+	border-collapse:collapse;
+    width: 100%;
+    clear: both;
+}
+
+table.sel tr th, table.sel_no_hover tr th{
+}
+
+table.sel tr:hover td, table.sel tr:hover{
+    color:black;
+    background:#DFDFE1;
+}
+
+table.sel tr.nohover:hover td, table.sel tr.nohover:hover{
+    background:none;
+}
+
+table.selIn{
+    margin: 0px;
+    width: 98%;
+}
+
+
+.ui-dialog-title{
+  margin-left: 15px !important;
+  font-size: 15px!important;
+  color: black!important;
+}
+
+.panel * :not(.ace_icon) :not(i){
+}
+.header{
+  color: black!important;
+}
+.panel-heading > .panel-title {
+  color: #333;
+  background-color: #f5f5f5;
+  border-color: #ddd;
+}
+.panel-title > .accordion-toggle{
+  color: #333!important;
+  background-color: #f5f5f5!important;
+}
+.footer {
+    padding-top: 74px;
+}
+
+/*
+ *  Avaliação novo layout
+ *
+ */
+.funcao_icon{
+    float: left;
+}
+
+
+
+@media (max-width: 1200px) {
+  /*  #header #rightheader {
+        width: 100%;
+    }*/
+    /*#header ul#menu, #header ul#small_menu{
+        float: left;
+    }*/
+  /*  #leftheader{
+        display: none;
+    }*/
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  .titescala:first-child{
+    width: 30% !important;
+  }
+  .titescala{
+      font-size: 10px;
+  }
+  .name-colab{
+    font-size: 10px;
+    margin: 5px auto;
+  }
+}
+
+
+.table tbody tr:nth-child(2n+1) {
+    background:#EFEFEF;
+}

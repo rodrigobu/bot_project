@@ -1,0 +1,209 @@
+{% load i18n %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Expires" content="0" />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store" />
+	<meta http-equiv="Pragma" content="no-cache, no-store" />
+	<meta http-equiv='content-type' content='text/html; charset=utf-8' charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="SPA" />
+	<meta name="author" content="Leme Tecnologia" />
+	<meta name='robots' content='noindex'>
+
+
+	<!--Title configuration-->
+
+	<!--meta content="http://{{request.get_host}}/media/images/logo_cliente.png" name="og:image"-->
+
+	<link rel="icon" href='{% static 'images/favicon.ico' %}' type="image/png">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Arimo:400,700,400italic">
+	<link rel="stylesheet" href='{% static 'css/fonts/linecons/css/linecons.css' %}'>
+	<link rel="stylesheet" href='{% static 'css/fonts/fontawesome/css/font-awesome.min.css' %}'>
+	<link rel="stylesheet" href='{% static 'css/fonts/elusive/css/elusive.css' %}'>
+	<link rel="stylesheet" href='{% static 'css/bootstrap.css' %}'>
+
+    <!--CSS-->
+    <link rel="stylesheet" href='{% static 'css/xenon/xenon-core.css' %}'>
+    <link rel="stylesheet" href='{% static 'css/xenon/xenon-forms.css' %}'>
+    <link rel="stylesheet" href='{% static 'css/xenon/xenon-components.css' %}'>
+    <link rel="stylesheet" href='{% static 'css/xenon/xenon-skins.css' %}'>
+    <link rel="stylesheet" href='{% static 'css/xenon/custom.css' %}'>
+    <link rel="stylesheet" href='{% static 'css/xenon/custom-skins.css' %}'>
+    <link rel="stylesheet" href='{% static 'css/xenon/spa-skins/blue.css' %}'>
+    <link rel="stylesheet" href='{% static 'css/xenon/spa-skins/coffee.css' %}'>
+    <link rel="stylesheet" href='{% static 'css/xenon/spa-skins/lightblue.css' %}'>
+    <link rel="stylesheet" href='{% static 'css/xenon/spa-skins/orange.css' %}'>
+    <link rel="stylesheet" href='{% static 'css/xenon/spa-skins/red.css' %}'>
+    <link rel="stylesheet" href='{% static 'css/xenon/spa-skins/yellow.css' %}'>
+    <link rel="stylesheet" href='{% static 'css/xenon/spa-skins/green2.css' %}'>
+    <link rel="stylesheet" href='{% static 'css/xenon/spa-skins/green3.css' %}'>
+		<link rel="stylesheet" href='{% static 'js/alertas/bootbox.css' %}'>
+		<link rel='stylesheet' href='{% static 'js/jquery-ui/jquery-ui.css' %}' />
+		<style>
+		 /* realizando um teste de overflow nomenu pra melhorar a usabilidade*/
+		.navbar-nav .has-sub ul .is-visible {
+			max-height: 500px!important;
+			overflow-y: scroll!important;
+		}
+		.margin-top-5per{
+			margin-top: -5%;
+		}
+		</style>
+    {% block custom_css %}{% endblock custom_css %}
+
+    <title>Django ChatterBot Example</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}"/>
+</head>
+<body class="">
+    <div class="page-container">
+    <div class="page">
+        <div class="jumbotron mt-1">
+          <h1 class="jumbotron-heading text-xs-center">CHATBOT LEME</h1>
+          <p class="lead text-xs-center">
+            Teste Chatbot.
+          </p>
+  
+          <hr class="my-2">
+  
+          <div class="row">
+            <div class="col-xs-6 offset-xs-3">
+              <ul class="list-group chat-log js-chat-log">
+              </ul>
+              <div class="input-group input-group-lg mt-1">
+                <input type="text" class="form-control js-text" placeholder="" value={{valor}}>
+                <span class="input-group-btn">
+                  <button class="btn btn-primary js-say">Enviar</button>
+                </span>
+              </div>
+  
+            </div>
+          </div>
+  
+        </div>
+        {% include "chat.html" %}
+  
+      </div>
+    </div>
+
+
+
+    <!-- Bottom Scripts -->
+    <script src='{% static 'js/jquery/jquery-2.2.4.min.js' %}'></script>
+	<script src='{% static 'js/jquery/jquery-ui.min.js' %}'></script>
+    <script src='{% static 'js/forms/csrf.js' %}'></script>
+    <script src='{% static 'js/bootstrap.min.js' %}'></script>
+    <script src='{% static 'js/xenon/TweenMax.min.js' %}'></script>
+    <script src='{% static 'js/xenon/resizeable.js' %}'></script>
+    <script src='{% static 'js/xenon/joinable.js' %}'></script>
+    <script src='{% static 'js/xenon/xenon-api.js' %}'></script>
+    <script src='{% static 'js/xenon/xenon-toggles.js' %}'></script>
+    <script src='{% static 'js/xenon/xenon-custom.js' %}'></script>
+    <script src='{% static 'js/alertas/bootbox.min.js' %}'></script>
+    <script src='{% static 'js/alertas/dialogs.js' %}'></script>
+    <script src='{% static 'js/alertas/ajax.js' %}'></script>
+    <script src='{% static 'js/carregando/jquery.blockUI.js' %}'></script>
+    <script src='{% static 'js/carregando/carregando.js' %}'></script>
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/js.cookie.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script>
+      var chatterbotUrl = '{% url "chatterbot" %}';
+      
+      var csrftoken = Cookies.get('csrftoken');
+
+      function csrfSafeMethod(method) {
+        // these HTTP methods do not require CSRF protection
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+      }
+
+      $.ajaxSetup({
+        beforeSend: function(xhr, settings) {
+          if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+            xhr.setRequestHeader("X-CSRFToken", csrftoken);
+          }
+        }
+      });
+
+      var $chatlog = $('.js-chat-log');
+      var $input = $('.js-text');
+      var $sayButton = $('.js-say');
+
+      function createRow(text) {
+        var $row = $('<li class="list-group-item"></li>');
+
+        $row.text(text);
+        $chatlog.append($row);
+      }
+
+      function submitInput() {
+        var inputData = {
+          'text': $input.val()
+        }
+        // Display the user's input on the web page
+        createRow(inputData.text);
+
+        var $submit = $.ajax({
+          type: 'POST',
+          url: chatterbotUrl,
+          data: JSON.stringify(inputData),
+          contentType: 'application/json'
+        });
+
+        $submit.done(function(statement) {
+            createRow(statement.text);
+
+            // Clear the input field
+            $input.val('');
+
+            // Scroll to the bottom of the chat interface
+            $chatlog[0].scrollTop = $chatlog[0].scrollHeight;
+        });
+
+        $submit.fail(function() {
+          // TODO: Handle errors
+        });
+      }
+
+      $sayButton.click(function() {
+        submitInput();
+      });
+
+      $input.keydown(function(event) {
+        // Submit the input when the enter button is pressed
+        if (event.keyCode == 13) {
+          submitInput();
+        }
+      });
+    </script>
+
+    <script type="text/javascript">
+      // Here is just a sample how to open chat conversation box
+      jQuery(document).ready(function($)
+      {
+              var $chat_conversation = $(".chat-conversation");
+             
+              $(".chat-group a").on('click', function(ev)
+              {
+                      ev.preventDefault();
+                     
+                      $chat_conversation.toggleClass('is-open');
+                     
+                      $(".chat-conversation textarea").trigger('autosize.resize').focus();
+              });
+             
+              $(".conversation-close").on('click', function(ev)
+              {
+                      ev.preventDefault();
+                      $chat_conversation.removeClass('is-open');
+              });
+      });
+    {% block custom_js %} {% endblock custom_js %}
+
+</body>
+</html>
