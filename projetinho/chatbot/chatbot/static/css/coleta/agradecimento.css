@@ -1,0 +1,26 @@
+/* ícones para mensagens */
+#contents_encerrar p.pmsg{	
+	height: 25px;
+	padding-top: 5px;
+	margin-bottom: 10px;	
+}
+
+#contents_encerrar p.pselecao{
+	background: url("/static/images/coleta/editp.png") no-repeat scroll left center;
+	padding-left: 30px;
+}
+
+#contents_encerrar p.plogout{
+	background: url("/static/images/coleta/Logoutp.png")  no-repeat scroll left center;
+	padding-left: 30px;
+}
+
+#contents_encerrar p.prelatorio{
+	background: url("/static/images/coleta/pdf_icon_p.png")  no-repeat scroll left center;
+	padding-left: 30px;
+}
+
+#contents_encerrar p.pwarning{
+	background: url("/static/images/coleta/warning_p.png")  no-repeat scroll left center;
+	padding-left: 30px;
+}

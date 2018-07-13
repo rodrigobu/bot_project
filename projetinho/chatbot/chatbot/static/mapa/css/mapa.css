@@ -1,0 +1,237 @@
+body{
+    background: #fff;
+}
+#navbar{
+    z-index: 50;
+}
+#mapa{
+    min-width: 100%;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 150px;
+}
+#mapa .disabled{
+    background: #fff !important;
+    border: 0 !important;
+}
+#mapa .border-top{
+    border-top: 1px solid #ddd;
+}
+#mapa .large{
+    min-width: 100px !important;
+}
+#mapa .middle{
+    min-width: 50px !important;
+}
+#mapa .little{
+    min-width: 25px !important;
+}
+#mapa tr.disabled *{
+    background: #eee !important;
+}
+#mapa-wrapper{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    border: 10px solid transparent;
+    border-top: 60px solid transparent;
+    border-bottom: 38px solid transparent;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #FFF;
+}
+.mapa-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    border: 10px solid transparent;
+    border-top: 60px solid transparent;
+    border-bottom: 38px solid transparent;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #FFF;
+}
+#mapa td:hover {
+    background: #eeeeee;
+}
+#mapa td.active {
+    background: #dddddd;
+}
+#mapa tr td *{
+    background: none;
+}
+#mapa th{
+    text-align: center;
+    color: #000;
+    border: 1px solid #B3B0B0;
+}
+#mapa td{
+    vertical-align: middle;
+    border: 1px solid #B3B0B0;
+}
+#mapa input:not([type=checkbox]), #mapa select, #mapa textarea{
+    width: 99%;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+    border: 0;
+    font-size: 14px;
+    resize: none;
+    color:#000000;
+}
+#mapa input.produto_field{
+    text-align: center;
+}
+#mapa .table-actions{
+    float: left;
+}
+#mapa .table-actions button{
+    font-size: 8px;
+    position: absolute;
+    width: 20px;
+    height: 16px;
+    padding: 0;
+    line-height: 16px;
+    border: 0;
+}
+#mapa hr{
+    background: #DDDDDD;
+    height: 1px;
+}
+.vertical{
+    height: 310px;
+    text-align: left;
+    vertical-align: bottom !important;
+}
+.vertical > *{
+    -webkit-transform: rotate(-90deg);  /* Saf3.1+, Chrome */
+    -moz-transform: rotate(-90deg);  /* FF3.5+ */
+    -ms-transform: rotate(-90deg);  /* FF3.5+ */
+    -o-transform: rotate(-90deg);  /* Opera 10.5 */
+    transform: rotate(-90deg);  /* Opera 10.5 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)"; /* IE8 */
+    filter:  progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083);  /* IE6,IE7 */
+    white-space: nowrap;
+    width: 30px;
+    /*font-size: 9px;*/
+    padding-left: 10px;
+    color: #1a1a1a;
+}
+.min-400{
+    min-width: 400px;
+}
+.min-200{
+    min-width: 200px;
+}
+.min-100{
+    min-width: 100px;
+}
+.headcol {
+    position:absolute;
+    width:5em;
+    left:0;
+    top:auto;
+    border-right: 0px none black;
+    border-top-width:3px; /*only relevant for first row*/
+    margin-top:-3px; /*compensate for top border*/
+}
+#funcao_desc_dialog textarea{
+    height: 92px;
+}
+#funcao_desc_dialog h4{
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+.mapa-footer{
+    background: #333;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+}
+.mapa-footer .input-group-btn, .mapa-footer .input-group-addon{
+    width: auto;
+}
+.mapa-footer .show_filters{
+    height: 42px;
+    line-height: 42px;
+}
+.mapa-footer select{
+    max-width: 150px;
+}
+.mapa-footer .inline{
+    margin-bottom: -15px;
+}
+.mapa-footer #page_num,
+.mapa-footer #page_total{
+    max-width: 50px;
+    background: #FFF !important;
+}
+#mapa-actions{
+    text-align: center;
+    color: #fff;
+    line-height: 32px;
+}
+.hidded_text {
+    width: 400px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.in_product_text {
+    margin-left: 20px;
+}
+h6.bold{
+    font-weight: bold;
+}
+
+.ui-dialog .ui-dialog-titlebar{
+    padding: 10px;
+}
+
+#ct_list, #ct_selected{
+    width: 100%;
+    border: 0;
+    height: 150px;
+    overflow: auto;
+    float: left;
+}
+.ct-select{
+    width: 40px !important;
+}
+.left-dialog-button{
+    position: absolute;
+    left: 10px;
+    bottom: 0px;
+    top: auto !important;
+}
+.ct-info .badge{
+    width: 20px;
+    margin-bottom: 5px;
+    height: 20px;
+    text-align: center;
+    padding: 0;
+    line-height: 20px;
+}
+
+.map-funcao-label{
+    margin-right: 10px;
+}
+
+
+#table-nivel-resumo th{
+    text-align: center;
+    color: #000;
+    border: 1px solid #B3B0B0;
+}
+#table-nivel-resumo td{
+    vertical-align: middle;
+    border: 1px solid #B3B0B0;
+}

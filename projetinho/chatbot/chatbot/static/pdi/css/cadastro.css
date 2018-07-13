@@ -1,0 +1,32 @@
+
+#div_competencias ul.multiselect-container.dropdown-menu {
+    position: inherit;
+    width: 100%;
+    display: block;
+}
+#div_competencias button.multiselect.dropdown-toggle.btn.btn-sm.col-xs-12 {
+    display: none;
+}
+#div_recursos ul.multiselect-container.dropdown-menu {
+    position: inherit;
+    width: 100%;
+    display: block;
+}
+#div_recursos button.multiselect.dropdown-toggle.btn.btn-sm.col-xs-12,
+#btn_save_acomp_colab,
+#btn_save_acomp_gestor {
+    display: none;
+}
+#btn_edit_acomp_colab,
+#btn_edit_acomp_gestor,
+#btn_save_acomp_colab,
+#btn_save_acomp_gestor {
+    cursor: pointer;
+}
+.fields_edit_acomp_colab,
+.fields_edit_acomp_gestor {
+    text-align: center;
+}
+.concluido {
+    color: darkgreen;
+}

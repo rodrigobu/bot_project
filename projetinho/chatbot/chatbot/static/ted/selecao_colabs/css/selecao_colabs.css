@@ -1,0 +1,28 @@
+div.pager {
+    text-align: center;
+    margin: 1em 0;
+}
+
+div.pager span {
+    border-style: double;
+    display: inline-block;
+    width: 1.8em;
+    height: 1.8em;
+    line-height: 1.8;
+    text-align: center;
+    cursor: pointer;
+    background: #ffffff;
+    color: #6faed9;
+    margin-right: 0.5em;
+    border-width: 1px;
+    border-color: #6faed9;
+}
+
+div.pager span.active {
+    background: #6faed9;
+    color: #ffffff;
+}
+
+.selecao-1-oculto {
+    display: none;
+}

@@ -1,0 +1,35 @@
+button.multiselect,
+.field-multiselect,
+.field-multiselect + .btn-group {
+    width: 100%;
+}
+.multiselect b.caret {
+    float: right;
+    margin-top: 7px !important;
+}
+.ui-dialog .ui-dialog-buttonpane {
+    margin-top: 1.5em;
+}
+.ui-dialog .ui-dialog-buttonpane, .ui-dialog-buttonset {
+    width: 100%;
+    min-width: 100%;
+    padding-left: 8px;
+}
+#div_id_colaborador > .controls > .btn-group,
+#div_id_colaborador > .controls > .btn-group > button {
+    width: 100%;
+    min-width: 100%;
+}
+.multiselect + .multiselect-container {
+     height: 300px;
+     position: relative;
+     overflow-y: auto;
+}
+.multiselect + .dropdown-menu > li > a:hover,
+.multiselect + .dropdown-menu > li > a:focus,
+.multiselect + .dropdown-menu > li > a:active,
+.multiselect + .dropdown-menu > li.active > a,
+.multiselect + .dropdown-menu > li.active > a:hover,
+.multiselect + .dropdown-menu .dropdown-submenu:hover > a {
+     background: #B4BABE;
+ }

@@ -1,0 +1,138 @@
+{% load i18n %}
+{% load static %}
+<script src='{% static 'js/jquery/jquery-2.2.4.min.js' %}'></script>
+<script src='{% static 'js/jquery/jquery-ui.min.js' %}'></script>
+<script src='{% static 'js/forms/csrf.js' %}'></script>
+<script src='{% static 'js/bootstrap.min.js' %}'></script>
+<script src='{% static 'js/xenon/TweenMax.min.js' %}'></script>
+<script src='{% static 'js/xenon/resizeable.js' %}'></script>
+<script src='{% static 'js/xenon/joinable.js' %}'></script>
+<script src='{% static 'js/xenon/xenon-api.js' %}'></script>
+<script src='{% static 'js/xenon/xenon-toggles.js' %}'></script>
+<script src='{% static 'js/xenon/xenon-custom.js' %}'></script>
+<script src='{% static 'js/alertas/bootbox.min.js' %}'></script>
+<script src='{% static 'js/alertas/dialogs.js' %}'></script>
+<script src='{% static 'js/alertas/ajax.js' %}'></script>
+<script src='{% static 'js/carregando/jquery.blockUI.js' %}'></script>
+<script src='{% static 'js/carregando/carregando.js' %}'></script>
+
+<script>
+  console.log('{{entrevista}}');
+  {% if entrevista %}
+    var chatterbotUrl = '{% url "chatterbot_entrevista" %}';
+  {% else %}
+    var chatterbotUrl = '{% url "chatterbot" %}';
+  {% endif%}
+  var csrftoken = Cookies.get('csrftoken');
+  var date = new Date().toLocaleString();
+
+  function csrfSafeMethod(method) {
+    // these HTTP methods do not require CSRF protection
+    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+  }
+
+  $.ajaxSetup({
+    beforeSend: function(xhr, settings) {
+      if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+        xhr.setRequestHeader("X-CSRFToken", csrftoken);
+      }
+    }
+  });
+
+  var chatlog = $('.js-chat-log');
+  var input = $('.js-text');
+  var input_btn_left = $('#js-btn-left');
+  var input_btn_right = $('#js-btn-right');
+  var botaoEnviar = $('.js-say');
+  var chatNotificacao = $("#chat_notificacao");
+  var count = 0
+
+  function createRowUsuario(text) {
+    var message = '<li class="">'
+    + '<div class="message-entry container_chat">'
+    + '<img src="/static/inhegas.jpg" alt="Avatar" class="right" />'
+    + `<p class="conversa" style="text-align:right;">${text}</p>`;
+    + '</div>';
+    + '</li>';
+
+
+    chatlog.append(message);
+  }
+
+  function createRowBot(text) {
+    var message = '<li class="">'
+    + '<div class="message-entry container_chat conv_bot">'
+    + '<img src="/static/images.png" alt="Avatar" class="left" />'
+    + `<p class="conversa">${text}</p>`;
+    + '</div>';
+    + '</li>';
+
+
+    chatlog.append(message);
+  }
+
+  function submitInput(input_val, input_resp) {
+    var inputData = {
+        'text': input_val
+    }
+    var inputDataResp = {
+        'text': input_resp
+    }
+
+    // Display the user's input on the web page
+    createRowUsuario(inputDataResp.text);
+
+    var $submit = $.ajax({
+      type: 'POST',
+      url: chatterbotUrl,
+      data: JSON.stringify(inputData),
+      global: false, /*Para cancelar o carregamento do ajax*/
+      contentType: 'application/json'
+    });
+
+    $submit.done(function(statement) {
+        createRowBot(statement.text);
+
+        // Clear the input field
+        input.val('');
+
+        // Scroll to the bottom of the chat interface
+        chatlog[0].scrollTop = chatlog[0].scrollHeight;
+    });
+
+
+    $submit.fail(function() {
+      // TODO: Handle errors
+    });
+  }
+
+  botaoEnviar.click(function() {
+    submitInput(input.val(), input.val());
+  });
+
+  input_btn_left.click(function(){
+    count ++
+    var btn_left = input_btn_left.val().concat('_'+count)
+    var btn_right = input_btn_right.val().concat('_'+count)
+    submitInput(btn_left, input_btn_left.val());
+  });
+
+  input_btn_right.click(function(){
+    count ++
+    var btn_left = input_btn_left.val().concat('_'+count)
+    var btn_right = input_btn_right.val().concat('_'+count)
+    submitInput(btn_right, input_btn_right.val());
+  });
+
+  input.keydown(function(event) {
+    // Submit the input when the enter button is pressed
+    if (event.keyCode == 13) {
+      submitInput(input.val(), input.val());
+    }
+  });
+
+  $('.chat-user').click(function(){
+    chatNotificacao.hide();
+  });
+
+</script>

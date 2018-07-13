@@ -1,0 +1,10 @@
+.ui-dialog-buttonset {
+	width: 99%;
+}
+.ui-dialog textarea {
+	max-height: 50px;
+	max-width: 100%;
+}
+.popover {
+	left: 0 !important;
+}

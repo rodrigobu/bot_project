@@ -1,0 +1,37 @@
+/* Não mostrar os gráficos de impressão na página web. */
+#chart_desempenho_print,
+#chart_ninebox_print,
+#grafico_geral_01_print,
+#grafico_geral_02_print,
+#chart_div2_print,
+#chart_div3_print {
+	display: none;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1370px) {
+	table#tabela_superior thead tr th {
+		font-size: 14px;
+	}
+}
+
+@media screen and (min-width: 800px) and (max-width: 920px) {
+	table#table_maiores_comp thead tr th {
+		font-size: 10px;
+	}
+	table#table_menores_gaps_comp thead tr th {
+		font-size: 10px;
+	}
+	table#table_maiores_gaps_tec thead tr th {
+		font-size: 10px;
+	}
+	table#table_menores_gaps_tec thead tr th {
+		font-size: 10px;
+	}
+	table#table_maiores_gaps_resp thead tr th {
+		font-size: 10px;
+	}
+}
+
+#imprimir-pag {
+	cursor: pointer;
+}

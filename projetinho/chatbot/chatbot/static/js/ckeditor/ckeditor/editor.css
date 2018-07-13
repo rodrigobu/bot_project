@@ -1,0 +1,912 @@
+element.style {
+    -moz-user-select: none;
+    margin: 0;
+    padding: 0;
+}
+body.cke_panel_frame {
+    overflow: visible;
+}
+ul.cke_panel_list {
+    list-style-type: none;
+    margin: 3px;
+    padding: 0;
+    white-space: nowrap;
+}
+li.cke_panel_listItem {
+    margin: 0;
+	font-size: 11px;
+}
+.cke_panel_listItem a {
+    /*border: 1px solid #FFFFFF;*/
+    color: inherit !important;
+    display: block;
+    overflow: hidden;
+    padding: 2px;
+    text-decoration: none;
+    text-overflow: ellipsis;
+}
+* html .cke_panel_listItem a {
+    color: #000000;
+    width: 100%;
+}
+:first-child + html .cke_panel_listItem a {
+    color: #000000;
+}
+.cke_panel_listItem.cke_selected a {
+    background-color: #E9F5FF;
+    /*border: 1px solid #CCCCCC;*/
+}
+.cke_panel_listItem a:hover, .cke_panel_listItem a:focus, .cke_panel_listItem a:active {
+    background-color: #DFF1FF;
+   /* border-color: #316AC5;*/
+}
+.cke_hc .cke_panel_listItem.cke_selected a, .cke_hc .cke_panel_listItem a:hover, .cke_hc .cke_panel_listItem a:focus, .cke_hc .cke_panel_listItem a:active {
+    border-width: 3px;
+    padding: 0;
+}
+.cke_panel_grouptitle {
+    background-color: #DCDCDC;
+    color: #000000;
+    font-size: 11px;
+    font-weight: bold;
+    margin: 0;
+    padding: 3px;
+    white-space: nowrap;
+}
+.cke_panel_listItem p, .cke_panel_listItem h1, .cke_panel_listItem h2, .cke_panel_listItem h3, .cke_panel_listItem h4, .cke_panel_listItem h5, .cke_panel_listItem h6, .cke_panel_listItem pre {
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+.cke_button_textcolor_panel, .cke_button_bgcolor_panel {
+    height: 135px;
+    width: 350px;
+}
+.cke_colorblock {
+    font-size: 11px;
+    padding: 3px;
+}
+.cke_colorblock, .cke_colorblock a {
+    color: #000000;
+    text-decoration: none;
+}
+span.cke_colorbox {
+    /*border: 1px solid #808080;*/
+    float: left;
+    height: 10px;
+    width: 10px;
+}
+.cke_rtl span.cke_colorbox {
+    float: right;
+}
+a.cke_colorbox {
+  /* border: 1px solid #FFFFFF;*/
+    float: left;
+    padding: 2px;
+}
+.cke_rtl a.cke_colorbox {
+    float: right;
+}
+a.cke_colorbox:hover, a.cke_colorbox:focus, a.cke_colorbox:active {
+    background-color: #DFF1FF;
+   /* border: 1px solid #316AC5;*/
+}
+a.cke_colorauto, a.cke_colormore {
+    border: 1px solid #FFFFFF;
+    cursor: pointer;
+    display: block;
+    padding: 2px;
+}
+a.cke_colorauto:hover, a.cke_colormore:hover, a.cke_colorauto:focus, a.cke_colormore:focus, a.cke_colorauto:active, a.cke_colormore:active {
+    background-color: #DFF1FF;
+    border: 1px solid #316AC5;
+}
+.cke_toolbox {
+    display: none;
+}
+.cke_browser_webkit .cke_toolbox, .cke_browser_webkit .cke_toolbox > span {
+    white-space: normal;
+}
+.cke_toolbox {
+    clear: both;
+    padding-bottom: 1px;
+}
+a.cke_toolbox_collapser, a.cke_toolbox_collapser:hover {
+    background-image: url("images/sprites.png");
+    background-position: 3px -739px;
+    background-repeat: no-repeat;
+    border: 1px solid #CCCCCC;
+    cursor: pointer;
+    float: right;
+    height: 11px;
+    margin: 11px 2px 2px;
+    width: 11px;
+}
+a.cke_toolbox_collapser span {
+    display: none;
+}
+.cke_hc a.cke_toolbox_collapser span {
+    display: inline;
+    font-family: Arial;
+    font-size: 10px;
+    font-weight: bold;
+}
+.cke_rtl a.cke_toolbox_collapser, .cke_rtl a.cke_toolbox_collapser:hover {
+    float: left;
+}
+a.cke_toolbox_collapser_min, a.cke_toolbox_collapser_min:hover {
+    background-image: url("images/sprites.png");
+    background-position: 4px -760px;
+    background-repeat: no-repeat;
+    margin: 2px;
+}
+.cke_rtl a.cke_toolbox_collapser_min, .cke_rtl a.cke_toolbox_collapser_min:hover {
+    background-position: 4px -781px;
+}
+.cke_toolbar {
+    display: inline-block;
+    float: left;
+    padding-bottom: 1px;
+    padding-top: 1px;
+}
+.cke_rtl .cke_toolbar {
+    float: right;
+}
+.cke_toolgroup {
+    display: inline-block;
+    float: left;
+}
+.cke_browser_ie .cke_toolgroup {
+}
+.cke_rtl .cke_toolgroup {
+    float: right;
+}
+.cke_browser_ie .cke_rtl .cke_toolgroup {
+}
+.cke_separator {
+    border-left: 1px solid #999999;
+    display: inline-block;
+    float: left;
+    height: 16px;
+    margin: 4px 2px;
+}
+.cke_browser_ie .cke_separator {
+}
+.cke_rtl .cke_separator {
+    float: right;
+}
+.cke_break {
+    clear: left;
+}
+.cke_rtl .cke_break {
+    clear: right;
+}
+.cke_toolbar_start {
+    background-image: url("images/toolbar_start.gif");
+    background-repeat: no-repeat;
+    display: inline-block;
+    float: left;
+    height: 20px;
+    margin: 4px 2px 0;
+    width: 3px;
+}
+.cke_browser_ie .cke_toolbar_start {
+}
+.cke_rtl .cke_toolbar_start {
+    float: right;
+}
+.cke_browser_ie .cke_rtl .cke_toolbar_start {
+}
+.cke_toolbar_end {
+    display: inline-block;
+    float: left;
+}
+.cke_browser_ie .cke_toolbar_end {
+}
+.cke_rtl .cke_toolbar_end {
+    float: right;
+}
+.cke_browser_ie .cke_rtl .cke_toolbar_end {
+}
+.cke_browser_ie9 .cke_rtl .cke_separator, .cke_browser_ie9 .cke_rtl .cke_toolbar_start, .cke_browser_ie9 .cke_rtl .cke_toolbar_end {
+    vertical-align: middle;
+}
+.cke_button a, .cke_button a:hover, .cke_button a:focus, .cke_button a:active, .cke_button a.cke_off {
+    border: 1px solid #EEEEEE;
+    border-radius: 3px 3px 3px 3px;
+    cursor: default;
+    display: inline-block;
+    height: 18px;
+    outline: medium none;
+    padding: 2px 4px;
+}
+.cke_button a, .cke_button a.cke_off {
+    background-color: #EEEEEE;
+    opacity: 0.7;
+}
+.cke_hc .cke_button a, .cke_hc .cke_button a.cke_off {
+    opacity: 1;
+}
+.cke_button a.cke_on {
+    background-color: #A3D7FF;
+    border: 1px solid #316AC5;
+    opacity: 1;
+}
+.cke_button a.cke_disabled * {
+    opacity: 0.3;
+}
+.cke_browser_ie .cke_button a.cke_disabled *, .cke_browser_ie a.cke_button:hover .cke_disabled * {
+}
+.cke_browser_ie .cke_rtl .cke_button a.cke_disabled *, .cke_browser_ie .cke_rtl a.cke_button:hover .cke_disabled * {
+}
+.cke_browser_ie6 .cke_button a.cke_disabled *, .cke_browser_ie6 a.cke_button:hover .cke_disabled *, .cke_browser_ie .cke_button.cke_noalphafix a.cke_disabled * {
+}
+.cke_hc .cke_button a.cke_disabled *, .cke_browser_ie.cke_hc a.cke_button:hover .cke_disabled * {
+    opacity: 0.6;
+}
+.cke_button a:hover, .cke_button a:focus, .cke_button a:active {
+    background-color: #DFF1FF;
+    border: 1px solid #316AC5;
+    padding: 2px 4px;
+}
+.cke_hc .cke_button a:hover, .cke_hc .cke_button a:focus, .cke_hc .cke_button a:active {
+    border-width: 3px;
+    padding: 0 2px !important;
+}
+.cke_button .cke_icon {
+    background-image: url("icons.png");
+    background-position: 100px center;
+    background-repeat: no-repeat;
+    cursor: default;
+    display: inline-block;
+    height: 16px;
+    margin-top: 1px;
+    width: 16px;
+}
+.cke_rtl .cke_button .cke_icon {
+    background-image: url("icons_rtl.png");
+}
+.cke_browser_ie .cke_button .cke_icon {
+}
+.cke_browser_ie .cke_rtl .cke_button .cke_icon {
+}
+.cke_browser_ie6 .cke_button .cke_icon, .cke_browser_ie6 .cke_rtl .cke_button .cke_icon, .cke_browser_ie .cke_button.cke_noalphafix .cke_icon, .cke_browser_ie .cke_rtl .cke_button.cke_noalphafix .cke_icon {
+}
+.cke_button .cke_label {
+    cursor: default;
+    display: none;
+    padding-left: 3px;
+    vertical-align: middle;
+}
+.cke_hc .cke_button .cke_label {
+    display: inline-block;
+    padding: 0;
+}
+.cke_hc .cke_button .cke_icon {
+    display: none;
+}
+.cke_accessibility {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+}
+.cke_button .cke_buttonarrow {
+    background-image: url("images/sprites.png");
+    background-position: 2px -717px;
+    background-repeat: no-repeat;
+    cursor: default;
+    display: inline-block;
+    height: 17px;
+    width: 8px;
+}
+.cke_rtl .cke_button .cke_buttonarrow {
+    background-image: url("images/sprites.png");
+    background-position: 0 -717px;
+}
+.cke_browser_gecko18 .cke_toolbar, .cke_browser_gecko18 .cke_button a, .cke_browser_gecko18 .cke_button a.cke_off, .cke_browser_gecko18 .cke_button .cke_icon, .cke_browser_gecko18 .cke_button .cke_buttonarrow, .cke_browser_gecko18 .cke_separator, .cke_browser_gecko18 .cke_toolbar_start {
+    display: block;
+    float: left;
+}
+.cke_browser_gecko18 .cke_hc .cke_button .cke_icon {
+    display: none;
+}
+.cke_browser_gecko18 .cke_rtl .cke_toolbar, .cke_browser_gecko18 .cke_rtl .cke_button a, .cke_browser_gecko18 .cke_rtl .cke_button a.cke_off, .cke_browser_gecko18 .cke_rtl .cke_button .cke_icon, .cke_browser_gecko18 .cke_rtl .cke_button .cke_buttonarrow, .cke_browser_gecko18 .cke_rtl .cke_separator, .cke_browser_gecko18 .cke_rtl .cke_toolbar_start {
+    float: right;
+}
+.cke_browser_gecko18 .cke_button .cke_label, .cke_browser_gecko18 .cke_break {
+    float: left;
+}
+.cke_browser_gecko18 .cke_rtl span.cke_inline_label {
+    float: right;
+}
+.cke_browser_gecko18 .cke_rtl .cke_button .cke_label, .cke_browser_gecko18 .cke_rtl .cke_break {
+    float: right;
+}
+.cke_browser_gecko18 .cke_separator {
+    margin-top: 4px;
+}
+.cke_browser_gecko18 .cke_button .cke_label {
+    padding-top: 3px;
+}
+.cke_browser_ie .cke_rtl .cke_toolgroup, .cke_browser_ie .cke_rtl .cke_separator, .cke_browser_ie .cke_rtl .cke_toolbar_start, .cke_browser_ie .cke_rtl .cke_toolbar_end {
+    float: none;
+}
+.cke_browser_ie8 .cke_toolbar, .cke_browser_ie8 .cke_toolgroup {
+    vertical-align: top;
+}
+.cke_browser_iequirks.cke_browser_ie8 .cke_toolbar, .cke_browser_iequirks.cke_browser_ie8 .cke_toolgroup {
+    vertical-align: baseline;
+}
+.cke_browser_ie .cke_rcombo, .cke_browser_ie .cke_rcombo * {
+    cursor: default;
+}
+.cke_contextmenu {
+    padding: 2px;
+}
+.cke_menuitem a {
+    display: block;
+}
+.cke_menuitem span {
+    cursor: default;
+}
+.cke_menuitem a:hover, .cke_menuitem a:focus, .cke_menuitem a:active {
+    background-color: #8F8F73;
+    display: block;
+}
+.cke_hc .cke_menuitem a:hover, .cke_hc .cke_menuitem a:focus, .cke_hc .cke_menuitem a:active {
+    border: 2px solid;
+}
+.cke_menuitem .cke_icon {
+    background-color: transparent;
+    background-image: url("icons.png");
+    background-position: 100px center;
+    background-repeat: no-repeat;
+    float: left;
+    height: 16px;
+    width: 16px;
+}
+.cke_rtl .cke_menuitem .cke_icon {
+    background-image: url("icons_rtl.png");
+}
+.cke_browser_ie .cke_menuitem .cke_icon {
+}
+.cke_browser_ie.cke_rtl .cke_menuitem .cke_icon {
+}
+.cke_browser_ie6 .cke_menuitem .cke_icon, .cke_browser_ie .cke_menuitem.cke_noalphafix .cke_icon {
+}
+.cke_menuitem .cke_disabled .cke_icon {
+    opacity: 0.7;
+}
+.cke_browser_ie .cke_menuitem .cke_disabled .cke_icon {
+}
+.cke_browser_ie.cke_rtl .cke_menuitem .cke_disabled .cke_icon {
+}
+.cke_browser_ie6 .cke_menuitem .cke_disabled .cke_icon, .cke_browser_ie .cke_menuitem.cke_noalphafix .cke_disabled .cke_icon {
+}
+.cke_menuitem .cke_icon_wrapper {
+    background-color: #E3E3C7;
+    border: 4px solid #E3E3C7;
+    clear: both;
+    float: left;
+    height: 16px;
+    opacity: 0.7;
+    width: 16px;
+}
+.cke_rtl .cke_menuitem .cke_icon_wrapper {
+    float: right;
+}
+.cke_menuitem a:hover .cke_icon_wrapper, .cke_menuitem a:focus .cke_icon_wrapper, .cke_menuitem a:active .cke_icon_wrapper {
+    background-color: #9D9D9D;
+    border: 4px solid #9D9D9D;
+    opacity: 0.7;
+}
+.cke_menuitem a.cke_disabled:hover .cke_icon_wrapper, .cke_menuitem a.cke_disabled:focus .cke_icon_wrapper, .cke_menuitem a.cke_disabled:active .cke_icon_wrapper {
+    background-color: #E3E3C7;
+    border: 4px solid #E3E3C7;
+}
+.cke_menuitem .cke_label {
+    background-color: #FFFFFF;
+    display: block;
+    height: 19px;
+    margin-left: 24px;
+    padding-left: 4px;
+    padding-right: 3px;
+    padding-top: 5px;
+}
+.cke_frameLoaded .cke_menuitem .cke_label {
+    opacity: 0.7;
+}
+.cke_rtl .cke_menuitem .cke_label {
+    margin-left: 0;
+    margin-right: 28px;
+    padding-left: 3px;
+    padding-right: 0;
+}
+.cke_menuitem a.cke_disabled .cke_label {
+    opacity: 0.3;
+}
+.cke_menuitem a:hover .cke_label, .cke_menuitem a:focus .cke_label, .cke_menuitem a:active .cke_label {
+    background-color: #8F8F73;
+    color: white;
+}
+.cke_menuitem a.cke_disabled:hover .cke_label, .cke_menuitem a.cke_disabled:focus .cke_label, .cke_menuitem a.cke_disabled:active .cke_label {
+    background-color: transparent;
+    color: black;
+}
+.cke_menuseparator {
+    background-color: #E3E3C7;
+    height: 2px;
+    opacity: 0.7;
+}
+.cke_menuarrow {
+    background-image: url("images/sprites.png");
+    background-position: 0 -784px;
+    background-repeat: no-repeat;
+    float: right;
+    height: 5px;
+    margin-right: 2px;
+    margin-top: 3px;
+    width: 3px;
+}
+.cke_rtl .cke_menuarrow {
+    background-position: 0 -763px;
+    float: left;
+    margin-left: 2px;
+    margin-right: 0;
+}
+.cke_menuarrow span {
+    display: none;
+}
+.cke_hc .cke_menuarrow {
+    margin-top: 0;
+    width: auto;
+}
+.cke_hc .cke_menuarrow span {
+    display: inline;
+}
+.cke_browser_ie.cke_ltr .cke_menuarrow {
+    position: absolute;
+    right: 2px;
+}
+.cke_browser_ie.cke_rtl .cke_menuarrow {
+    left: 2px;
+    position: absolute;
+}
+.cke_rcombo {
+    display: inline-block;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 2px;
+    vertical-align: top;
+}
+.cke_browser_ie .cke_rcombo {
+}
+.cke_rcombopanel {
+    border: 1px solid #316AC5;
+    border-top-left-radius: 0;
+}
+.cke_rcombo a {
+    display: inline-block;
+    float: left;
+    opacity: 0.7;
+}
+.cke_rtl .cke_rcombo a {
+    float: right;
+}
+.cke_hc .cke_rcombo a {
+    opacity: 1;
+}
+.cke_rcombo .cke_label {
+    background-color: #F1F1E3;
+    cursor: default;
+    float: left;
+    height: 22px;
+    line-height: 20px;
+    opacity: 0.7;
+    padding-left: 4px;
+    padding-right: 5px;
+}
+.cke_rtl .cke_rcombo .cke_label {
+    float: right;
+    padding-left: 5px;
+    padding-right: 4px;
+}
+.cke_hc .cke_rcombo .cke_label {
+    opacity: 1;
+}
+.cke_rcombo .cke_inline_label {
+    color: #FFFFFF;
+}
+.cke_rcombo .cke_text {
+    background-color: #FFFFFF;
+    border: 1px solid #8F8F73;
+    cursor: default;
+    display: inline-block;
+    height: 12px;
+    overflow: hidden;
+    padding: 4px 5px;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    width: 60px;
+}
+.cke_ltr .cke_rcombo .cke_text {
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+}
+.cke_rtl .cke_rcombo .cke_text {
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.cke_browser_iequirks .cke_rcombo .cke_text {
+    height: 22px;
+}
+.cke_rcombo .cke_openbutton {
+    border-bottom: 1px solid #8F8F73;
+    border-top: 1px solid #8F8F73;
+    display: inline-block;
+}
+.cke_rcombo .cke_openbutton .cke_icon {
+    background-image: url("images/sprites.png");
+    background-position: 5px -715px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 20px;
+    width: 14px;
+}
+.cke_browser_ie .cke_rcombo .cke_openbutton .cke_icon {
+}
+.cke_browser_ie6 .cke_rcombo .cke_openbutton .cke_icon {
+}
+.cke_hc .cke_rcombo .cke_openbutton .cke_icon {
+    background: none repeat scroll 0 0 transparent;
+}
+.cke_ltr .cke_rcombo .cke_openbutton {
+    border-bottom-right-radius: 3px;
+    border-right: 1px solid #8F8F73;
+    border-top-right-radius: 3px;
+}
+.cke_rtl .cke_rcombo .cke_openbutton {
+    border-bottom-left-radius: 3px;
+    border-left: 1px solid #8F8F73;
+    border-top-left-radius: 3px;
+}
+.cke_rcombo .cke_off a:hover, .cke_rcombo .cke_off a:focus, .cke_rcombo .cke_off a:active, .cke_rcombo .cke_on a {
+    opacity: 1;
+}
+.cke_rcombo .cke_off a:hover .cke_text, .cke_rcombo .cke_off a:focus .cke_text, .cke_rcombo .cke_off a:active .cke_text, .cke_rcombo .cke_on .cke_text {
+    border-color: #316AC5;
+}
+.cke_rcombo .cke_off a:hover .cke_openbutton, .cke_rcombo .cke_off a:focus .cke_openbutton, .cke_rcombo .cke_off a:active .cke_openbutton, .cke_rcombo .cke_on .cke_openbutton {
+    background-color: #DFF1FF;
+    border-color: #316AC5;
+}
+.cke_rcombo .cke_on .cke_text {
+    border-bottom-left-radius: 0;
+}
+.cke_rcombo .cke_on .cke_openbutton {
+    border-bottom-right-radius: 0;
+}
+.cke_rcombo .cke_disabled .cke_label {
+    opacity: 0.3;
+}
+.cke_hc .cke_rcombo .cke_disabled .cke_label {
+    opacity: 0.7;
+}
+.cke_rcombo .cke_disabled .cke_text, .cke_rcombo .cke_disabled .cke_openbutton {
+    opacity: 0.5;
+}
+.cke_browser_ie .cke_rcombo .cke_disabled .cke_openbutton {
+}
+.cke_browser_ie6 .cke_rcombo .cke_disabled .cke_openbutton {
+}
+.cke_hc .cke_rcombo .cke_disabled .cke_text, .cke_hc .cke_rcombo .cke_disabled .cke_openbutton {
+    opacity: 0.8;
+}
+.cke_rcombo .cke_disabled .cke_text {
+    color: #FFFFFF;
+}
+.cke_browser_gecko18 .cke_rcombo, .cke_browser_gecko18 .cke_rcombo .cke_label, .cke_browser_gecko18 .cke_rcombo .cke_text, .cke_browser_gecko18 .cke_rcombo .cke_openbutton, .cke_browser_webkit .cke_rcombo .cke_label, .cke_browser_webkit .cke_rcombo .cke_text, .cke_browser_webkit .cke_rcombo .cke_openbutton {
+    display: block;
+    float: left;
+}
+.cke_browser_gecko18 .cke_rtl .cke_rcombo, .cke_browser_gecko18 .cke_rtl .cke_rcombo .cke_label, .cke_browser_gecko18 .cke_rtl .cke_rcombo .cke_text, .cke_browser_gecko18 .cke_rtl .cke_rcombo .cke_openbutton, .cke_browser_webkit .cke_rtl .cke_rcombo .cke_label, .cke_browser_webkit .cke_rtl .cke_rcombo .cke_text, .cke_browser_webkit .cke_rtl .cke_rcombo .cke_openbutton {
+    float: right;
+}
+.cke_browser_ie .cke_rtl .cke_rcombo, .cke_browser_ie .cke_rtl .cke_rcombo a, .cke_browser_ie .cke_rtl .cke_rcombo .cke_label {
+    float: none;
+}
+.cke_browser_iequirks .cke_rcombo .cke_openbutton {
+    height: 22px;
+}
+.cke_rtl .cke_rcombo .cke_font .cke_text, .cke_rtl .cke_rcombo .cke_fontSize .cke_text {
+    direction: ltr;
+}
+.cke_path {
+    display: none;
+}
+.cke_path {
+    display: inline-block;
+    float: left;
+    padding: 3px 3px 0;
+}
+.cke_rtl .cke_path {
+    float: right;
+}
+.cke_path a, .cke_path .cke_empty {
+    background-color: #EEEEEE;
+    border: 1px solid #EEEEEE;
+    cursor: default;
+    display: inline-block;
+    float: left;
+    margin-bottom: 3px;
+    padding: 1px 4px;
+}
+.cke_path .cke_empty {
+    visibility: hidden;
+}
+.cke_rtl .cke_path a, .cke_rtl .cke_path cke_empty {
+    float: right;
+}
+.cke_path a:hover, .cke_path a:focus, .cke_path a:active {
+    background-color: #DFF1FF;
+    border: 1px solid #316AC5;
+    outline: medium none;
+    padding: 1px 4px;
+}
+.cke_browser_ie .cke_rtl .cke_path a, .cke_browser_ie .cke_rtl .cke_path .cke_empty {
+    float: none;
+}
+.cke_path .cke_label {
+    display: none;
+}
+.cke_button_source .cke_icon {
+    background-position: 0 0;
+}
+.cke_button_docProps .cke_icon {
+    background-position: 0 -16px;
+}
+.cke_button_newpage .cke_icon {
+    background-position: 0 -48px;
+}
+.cke_button_preview .cke_icon {
+    background-position: 0 -64px;
+}
+.cke_button_cut .cke_icon {
+    background-position: 0 -96px;
+}
+.cke_button_copy .cke_icon {
+    background-position: 0 -112px;
+}
+.cke_button_paste .cke_icon {
+    background-position: 0 -128px;
+}
+.cke_button_pastetext .cke_icon {
+    background-position: 0 -144px;
+}
+.cke_button_find .cke_icon {
+    background-position: 0 -240px;
+}
+.cke_button_replace .cke_icon {
+    background-position: 0 -256px;
+}
+.cke_button_selectAll .cke_icon {
+    background-position: 0 -272px;
+}
+.cke_button_removeFormat .cke_icon {
+    background-position: 0 -288px;
+}
+.cke_button_bold .cke_icon {
+    background-position: 0 -304px;
+}
+.cke_button_italic .cke_icon {
+    background-position: 0 -320px;
+}
+.cke_button_underline .cke_icon {
+    background-position: 0 -336px;
+}
+.cke_button_strike .cke_icon {
+    background-position: 0 -352px;
+}
+.cke_button_subscript .cke_icon {
+    background-position: 0 -368px;
+}
+.cke_button_superscript .cke_icon {
+    background-position: 0 -384px;
+}
+.cke_button_table .cke_icon {
+    background-position: 0 -608px;
+}
+.cke_button_horizontalrule .cke_icon {
+    background-position: 0 -624px;
+}
+.cke_button_smiley .cke_icon {
+    background-position: 0 -640px;
+}
+.cke_button_link .cke_icon {
+    background-position: 0 -528px;
+}
+.cke_button_unlink .cke_icon {
+    background-position: 0 -544px;
+}
+.cke_button_anchor .cke_icon {
+    background-position: 0 -560px;
+}
+.cke_button_image .cke_icon {
+    background-position: 0 -576px;
+}
+.cke_button_flash .cke_icon {
+    background-position: 0 -592px;
+}
+.cke_button_specialchar .cke_icon {
+    background-position: 0 -656px;
+}
+.cke_button_pagebreak .cke_icon {
+    background-position: 0 -672px;
+}
+.cke_button_print .cke_icon {
+    background-position: 0 -176px;
+}
+.cke_button_checkspell .cke_icon, .cke_button_scayt .cke_icon {
+    background-position: 0 -192px;
+}
+.cke_button_pagebreak .cke_icon {
+    background-position: 0 -672px;
+}
+.cke_button_textcolor .cke_icon {
+    background-position: 0 -704px;
+}
+.cke_button_bgcolor .cke_icon {
+    background-position: 0 -720px;
+}
+.cke_button_form .cke_icon {
+    background-position: 0 -752px;
+}
+.cke_button_checkbox .cke_icon {
+    background-position: 0 -768px;
+}
+.cke_button_radio .cke_icon {
+    background-position: 0 -784px;
+}
+.cke_button_textfield .cke_icon {
+    background-position: 0 -800px;
+}
+.cke_button_textarea .cke_icon {
+    background-position: 0 -816px;
+}
+.cke_button_showblocks .cke_icon {
+    background-position: 0 -1136px;
+}
+.cke_button_select .cke_icon {
+    background-position: 0 -832px;
+}
+.cke_button_button .cke_icon {
+    background-position: 0 -848px;
+}
+.cke_button_imagebutton .cke_icon {
+    background-position: 0 -864px;
+}
+.cke_button_hiddenfield .cke_icon {
+    background-position: 0 -880px;
+}
+.cke_button_undo .cke_icon {
+    background-position: 0 -208px;
+}
+.cke_rtl .cke_button_undo .cke_icon {
+    background-position: 0 -224px;
+}
+.cke_button_redo .cke_icon {
+    background-position: 0 -224px;
+}
+.cke_rtl .cke_button_redo .cke_icon {
+    background-position: 0 -208px;
+}
+.cke_button_templates .cke_icon {
+    background-position: 0 -80px;
+}
+.cke_button_numberedlist .cke_icon {
+    background-position: 0 -400px;
+}
+.cke_button_bulletedlist .cke_icon {
+    background-position: 0 -416px;
+}
+.cke_mixed_dir_content .cke_button_numberedlist .cke_icon {
+    background-position: 0 -1217px;
+}
+.cke_mixed_dir_content .cke_button_bulletedlist .cke_icon {
+    background-position: 0 -1233px;
+}
+.cke_button_outdent .cke_icon {
+    background-position: 0 -432px;
+}
+.cke_button_indent .cke_icon {
+    background-position: 0 -448px;
+}
+.cke_mixed_dir_content .cke_button_indent .cke_icon {
+    background-position: 0 -1265px;
+}
+.cke_mixed_dir_content .cke_button_outdent .cke_icon {
+    background-position: 0 -1249px;
+}
+.cke_button_justifyleft .cke_icon {
+    background-position: 0 -464px;
+}
+.cke_button_justifycenter .cke_icon {
+    background-position: 0 -480px;
+}
+.cke_button_justifyright .cke_icon {
+    background-position: 0 -496px;
+}
+.cke_button_justifyblock .cke_icon {
+    background-position: 0 -512px;
+}
+.cke_button_blockquote .cke_icon {
+    background-position: 0 -1152px;
+}
+.cke_button_flash .cke_icon {
+    background-position: 0 -592px;
+}
+.cke_button_pastefromword .cke_icon {
+    background-position: 0 -160px;
+}
+.cke_button_save .cke_icon {
+    background-position: 0 -32px;
+}
+.cke_button_about .cke_icon {
+    background-position: 0 -736px;
+}
+.cke_button_maximize .cke_icon {
+    background-position: 0 -1040px;
+}
+.cke_button_creatediv .cke_icon {
+    background-position: 0 -1168px;
+}
+.cke_button_editdiv .cke_icon {
+    background-position: 0 -1184px;
+}
+.cke_button_removediv .cke_icon {
+    background-position: 0 -1200px;
+}
+.cke_button_bidirtl .cke_icon {
+    background-position: 0 -1072px;
+}
+.cke_button_bidiltr .cke_icon {
+    background-position: 0 -1056px;
+}
+.cke_button_iframe .cke_icon {
+    background-position: 0 -1279px;
+}
+.cke_button_source .cke_label {
+    display: inline-block;
+}
+.cke_styles_panel {
+    height: 170px;
+    width: 350px;
+}
+.cke_format_panel {
+    height: 170px;
+    width: 250px;
+}
+.cke_font_panel {
+    height: 170px;
+    width: 250px;
+}
+.cke_fontSize_panel {
+    height: 170px;
+}
+.cke_fontSize .cke_text {
+    width: 20px;
+}
+.cke_browser_iequirks .cke_fontSize .cke_text {
+    width: 32px;
+}
+html {
+    visibility: inherit;
+}
+html.cke_skin_django_container {
+    visibility: visible;
+}
+
+.cke_voice_label {
+    display: none !important;
+}

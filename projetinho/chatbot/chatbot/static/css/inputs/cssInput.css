@@ -1,0 +1,46 @@
+/*
+ * Este arquivo contém apenas css de input tipo text.
+ */
+
+
+input.full_select{
+    width: 100% !important;
+}
+/* inputs de texto */
+form input.textexgg { width: 710px!important; }
+form input.textexg { width: 674px!important; }
+form input.textgg { width: 618px!important; }
+form input.textg { width: 573px!important; }
+
+form input.textmg { width: 465px!important; }
+
+form input.textmeio { width: 344px!important; } /* 2 campos ocupam a tela */
+form input.textmm{width: 222px!important; } /* 3 campos ocupam a tela*/
+form input.textmmm{width: 161px!important; } /* 4 campos ocupam a tela*/
+
+form input.textp { width: 115px!important; }
+form input.textpp { width: 69px!important; }
+form input.textppp { width: 23.5px!important; }
+
+
+/* inputs de texto com fborder */
+form input.textexgg { width: 690px!important; }
+form input.textexg { width: 643.5px!important; }
+form input.textgg { width: 598px!important; }
+form input.textg { width: 553px!important; }
+
+form input.textmg { width: 450px!important; }
+
+form input.textmeio { width: 332px!important; } /* 2 campos ocupam a tela */
+form input.textmm{width: 215px!important; } /* 3 campos ocupam a tela*/
+form input.textmmm{width: 155px!important; } /* 4 campos ocupam a tela*/
+
+form input.textp { width: 110px!important; }
+form input.textpp { width: 67px!important; }
+form input.textppp { width: 22.5px!important; }
+
+
+
+.radio label, .checkbox label {
+    display: block!important;
+}

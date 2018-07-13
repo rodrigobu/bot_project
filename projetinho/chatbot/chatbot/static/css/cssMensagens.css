@@ -1,0 +1,48 @@
+/* div's de mensagens de atenção, warning, etc... */
+
+.atencao{
+    border-radius: 5px 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;     
+    border: 1px solid red;
+    background: url(/static/images/Attention-g.png) #FFDFDF no-repeat  2% center ;
+    padding: 10px 10px 20px 10px;
+    height: 50px; 
+}
+
+.atencao p, .warning p, .info p{
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 70px;
+    padding: 0px;
+}
+
+.atencao p em{
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+    color: #D62222;
+}
+
+.warning {
+    border-radius: 5px 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;     
+    border: 1px solid #FFAD33;
+    background: url(/static/images/Warning-g.png) #FFFFAA no-repeat  2% center ;
+    padding: 10px 10px 20px 10px;
+    height: 50px; 
+}
+
+.warning p em{
+    color: #D62222;
+}
+
+.info{
+    border-radius: 5px 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;     
+    border: 1px solid #296c36;
+    background: url(/static/images/Info-g.png) #DFFFDF no-repeat  2% center ;
+    padding: 10px 10px 20px 10px;
+    height: 50px; 
+}
+
+.info p em{
+    color: black;
+}

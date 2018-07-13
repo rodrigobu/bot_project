@@ -1,0 +1,31 @@
+/*
+ * Este arquivo contém apenas css de textarea.
+ */
+
+/*textareas */
+form fieldset p textarea.textareaexgg { width: 760px!important;}
+form fieldset p textarea.textareaexgm { width: 710px!important;}
+form fieldset p textarea.textareaexg { width: 674px!important;}
+form fieldset p textarea.textareagg { width:  566px!important;}
+form fieldset p textarea.textareag {  width: 502px!important;}
+form fieldset p textarea.textaream {  width: 407px!important;}
+form fieldset p textarea.textareameio { width: 344px!important;}
+form fieldset p textarea.textareamed { width: 243px!important;}
+
+/*textareas com fborder*/
+form textarea.textareaexgg { width: 690px!important;}
+form textarea.textareaexg { width: 631px!important;}
+form textarea.textareagg { width:  536px!important;}
+form textarea.textareag {  width: 472px!important;}
+form textarea.textaream {  width: 377px!important;}
+form textarea.textareameio { width: 338px!important;}
+form textarea.textareamed { width: 164.5px!important;}
+
+/* personalização heigth textarea*/
+form textarea.textareaHpp { height: 50px!important;}
+form textarea.textareaH60 { height: 60px!important;}
+form textarea.textareaHp { height: 75px!important;}
+form textarea.textareaHm { height: 100px!important;}
+form textarea.textareaHg { height: 150px!important;}
+form textarea.textareaHgg { height: 200px!important;}
+form textarea.textareaHexg { height: 250px!important;}

@@ -1,0 +1,184 @@
+/*Estilos de impressão*/
+@page {
+  size: portrait;
+  margin-top: 1.5cm;
+}
+
+body {
+  margin: 0mm;
+  padding: 0mm;
+}
+
+footer {
+  display: none;
+}
+
+g.highcharts-button {
+  display: none;
+}
+
+.row_comportamental {
+  margin-top: 200px;
+}
+
+/* .row_menor_comportamental {
+  position: relative;
+  top: 200px;
+} */
+
+.row_graf_comportamental {
+  margin-top: 50px;
+}
+
+.graf_comportamental_resumo_2 {
+  position: relative;
+  top: 150px;
+}
+
+.table_maiores_comp {
+  position: relative;
+  margin-bottom: 150px;
+}
+
+.table_menores_gaps_comp {
+   position: relative;
+  /*
+  top: 350px; */
+  margin-top: 200px;
+}
+
+.table_menores_gaps_comp_tit{
+  margin-bottom: -200px;
+}
+
+.table_maiores_gaps_tec{
+  position: relative;
+  margin-top: 800px;
+}
+
+.table_maiores_gaps_tec_tit{
+  margin-top: 150px;
+  margin-bottom: -800px;
+}
+#chart_desempenho_print {
+  position: relative;
+  bottom: 90px;
+}
+
+.table_menores_gaps_tec_tit{
+  margin-top: 50px;
+  margin-bottom: -1000px;
+}
+
+.table_menores_gaps_tec{
+  position: relative;
+  margin-top: 1000px;
+}
+
+#grafico_geral_01_print,
+#grafico_geral_02_print {
+  position: relative;
+  left: 200px;
+}
+
+#chart_desempenho,
+#chart_ninebox,
+#grafico_geral_01,
+#grafico_geral_02,
+#chart_div2,
+#chart_div3 {
+  display: none;
+}
+
+#colab-foto-cabecalho {
+  float: right;
+  position: relative;
+  top: 100px;
+}
+
+div.panel-heading:not(.panel-heading-foto) {
+  display: none;
+}
+
+.panel-heading-foto {
+  padding-bottom: 0px !important;
+}
+
+.panel-desempenho {
+  padding-top: 0px;
+}
+
+.panel-body-desempenho {
+  padding-top: 0px !important;
+}
+
+#header_foto.panel-heading {
+  padding-bottom: 0px;
+}
+
+#header_foto {
+  position: relative;
+  bottom: 150px;
+  padding-bottom: 0px;
+}
+
+#row-desempenho-medio-chart {
+  margin-top: 1px;
+}
+
+div.panel-heading {
+  padding-bottom: 0px;
+}
+
+.dx-export-menu-button,
+div.panel-options,
+h3.panel-title {
+  display: none;
+}
+
+#imprimir-pag {
+  visibility: hidden;
+}
+
+#tabela-superior-div {
+  table-layout: auto
+}
+
+.margem_acima {
+  margin-top: 20px;
+}
+
+.page_break_after {
+  page-break-after: avoid;
+  margin-bottom: 10px;
+}
+
+.page_break_before {
+  page-break-before: always;
+  margin-top: 10px;
+}
+
+table {
+  font-size: 10px;
+}
+
+.table_maiores_gaps_resp{
+  position: relative;
+  margin-top: 0px;
+}
+
+.table_maiores_gaps_resp_tit{
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.grafico_resultado{
+  margin-top: 1500px;
+
+}
+
+.page_break_before_resp{
+    page-break-before: always;
+    margin-top: 10px;
+}

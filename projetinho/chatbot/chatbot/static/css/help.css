@@ -1,0 +1,26 @@
+.help-list{
+    list-style: none;    
+    height: 315px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.help-list li{
+    cursor: pointer;
+    width: 309px;
+    padding: 10px;
+    position: relative;
+}
+.help-list li h5{
+    margin: 0;    
+}
+.help-list li:hover,
+.help-list li.active{
+    background: #eee;
+}
+.help-list li img{
+    margin-right: 10px;
+}
+.help-container{
+    width: 423px;    
+    min-height: 1px;
+}

@@ -1,0 +1,60 @@
+/*
+ * Aqui são feitas todas as configurações de selects.
+ */
+
+/* select*/
+select.full_select{
+    width: 100% !important;
+}
+
+form select.selectmega, form select.selectemega + .chzn-container{ width: 920px!important;}
+form select.selectexgg, form select.selectexgg + .chzn-container{ width: 720px!important;}
+form select.selectexg, form select.selectexg + .chzn-container { width: 675px!important;}
+form select.selectgg,form select.selectgg + .chzn-container { width: 629px!important;}
+form select.selectg, form select.selectg + .chzn-container { width: 584px!important;}
+form select.selectmg, form select.selectmg + .chzn-container { width: 478px!important;}
+
+.chzn-results,
+.chzn-drop {
+	width: 97.5% !important;
+}
+.chzn-search input{
+	width: 93.5% !important;
+}
+
+.chzn-container {
+	font-size:11px !important;
+}
+
+form select.selectmeio { width: 356px!important;} /* 2 campos ocupam a tela */
+form select.selectmm{width: 234px!important;} /* 3 campos ocupam a tela*/
+form select.selectmmm{width: 173px!important;} /* 4 campos ocupam a tela*/
+
+form select.selectp { width: 126px!important;}
+form select.selectpp { width: 81.5px!important;}
+form select.selectppp { width: 35.5px!important;}
+
+
+/* selects de selecto com fborder */
+form select.selectexgg { width: 703px!important;}
+form select.selectexg { width: 656px!important;}
+form select.selectgg { width: 610px!important;}
+form select.selectg { width: 566px!important;}
+
+form select.selectmg { width: 461px!important;}
+form select.selectmgp { width: 410px!important;}
+
+form select.selectmeio { width: 344px!important;} /* 2 campos ocupam a tela */
+form select.selectmm{width: 227px!important;} /* 3 campos ocupam a tela*/
+form select.selectmmm{width: 167px!important;} /* 4 campos ocupam a tela*/
+
+form select.selectp { width: 121px!important;}
+form select.selectpp { width: 79px!important;}
+form select.selectppp { width: 34.5
+	px!important;}
+
+
+/* multiselect */
+.ui-multiselect{
+    height: 30px;
+}

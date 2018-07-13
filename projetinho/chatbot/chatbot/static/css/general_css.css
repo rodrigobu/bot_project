@@ -1,0 +1,175 @@
+/* Zera CSS para suportar o Layout do sistema GCA */
+
+
+/*Menu Lateral*/
+
+.sidebar.compact .nav-list a span.badge.nmenu,
+.sidebar.compact .nav-list a span.label.nmenu {
+    top: 0px;
+    right: 0px;
+}
+
+.sidebar .sidebar-shortcuts {
+    overflow: visible;
+}
+
+#sidebar .nav-list> li> a {
+    padding: 5px;
+    padding-top: 20px;
+}
+
+.sidebar.compact .nav-list> li> a> .menu-icon {
+    line-height: 23px;
+    height: 23px;
+}
+
+#sidebar .nav-list> li> a.home {
+    padding-top: 5px;
+}
+
+
+/* Redimensionamento Topo */
+
+.topo {
+    min-height: 57px;
+}
+
+.topo .ace-nav> li {
+    height: 57px;
+}
+
+.topo .ace-nav> li> a {
+    padding-top: 5px;
+}
+
+.topo .navbar-container {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.simple_margin_top_bot {
+    margin-top: 3px !important;
+    margin-bottom: 3px !important;
+}
+
+.no_margin_top_bot {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.no_margin_sides {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+.no_padding_sides {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+
+/* Correção footer*/
+
+.footer .footer-inner .footer-content {
+    border-top: 1px solid #e5e5e5!important;
+    left: 0px!important;
+    padding: 8px;
+    position: none!important;
+    right: 0px!important;
+}
+
+.footer .footer-inner {
+    left: 100px!important;
+}
+
+.input-group.date .input-group-addon {
+    cursor: default!important;
+}
+
+.checkbox {
+    margin-top: 0px!important;
+}
+
+.editable_elem label {
+    float: left;
+    margin-right: 10px;
+}
+
+ul.errorlist {
+    padding-left: 0;
+    /*margin-top: 5px;*/
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-left: 0px!important;
+}
+
+ul.errorlist li {
+    list-style: none;
+    color: red;
+    width: 100%;
+    font-size: 0.8em;
+}
+
+ul.errorlist li span {
+    margin-top: 5px;
+}
+
+ul.errorlist li img {
+    vertical-align: middle;
+    margin-right: 2px;
+}
+
+.checkboxinput {
+    height: 21px!important;
+}
+
+.radio {
+    margin-top: 2px!important;
+}
+
+
+
+/* Esquema de Hiddens */
+@media (max-width: 543px) {
+.hidden-xs-down {
+    display: none !important;
+}
+}
+@media (min-width: 544px) {
+.hidden-sm-up {
+    display: none !important;
+}
+}
+@media (max-width: 767px) {
+.hidden-sm-down {
+    display: none !important;
+}
+}
+@media (min-width: 768px) {
+.hidden-md-up {
+    display: none !important;
+}
+}
+@media (max-width: 991px) {
+.hidden-md-down {
+    display: none !important;
+}
+}
+@media (min-width: 992px) {
+.hidden-lg-up {
+    display: none !important;
+}
+}
+@media (max-width: 1199px) {
+.hidden-lg-down {
+    display: none !important;
+}
+}
+@media (min-width: 1200px) {
+.hidden-xl-up {
+    display: none !important;
+}
+}
+.hidden-xl-down {
+    display: none !important;
+}

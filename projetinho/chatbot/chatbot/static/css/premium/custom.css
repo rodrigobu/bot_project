@@ -1,0 +1,8 @@
+
+.no-color, .ace-nav > li > a {
+	background-color: transparent !important;
+	color: #333333 !important;
+}
+.navbar-header{
+	max-height: 57px;
+}

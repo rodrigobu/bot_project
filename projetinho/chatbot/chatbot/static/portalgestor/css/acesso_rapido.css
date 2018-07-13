@@ -1,0 +1,78 @@
+.dock-container {
+    font-size: 19px;
+    position: relative;
+    text-align: center;
+    top:-5%;
+    right: 0;
+    left: 0;
+    background: #FFFFFF;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    padding-bottom: 2px;
+    padding-top: 5px;
+    margin-top: 0px;
+    border-top: 1px solid #D4D4D4;
+  }
+
+  .dock-container ul {
+    margin-bottom: 1px;
+  }
+
+  .page-container{
+    margin-top: 105px!important;
+  }
+  .nav-userinfo > .dropdown > .dropdown-menu {
+    z-index: 1009!important;
+    margin-top: -4px!important;
+  }
+  .dock-container li {
+      list-style-type: none;
+      display: inline-block;
+      position: relative;
+      width: 2%;
+  }
+  .dock-container li .acesso_rapido {
+       width: 100%;
+       height: auto;
+       margin-top: 3%;
+       -webkit-transition: all 0.3s;
+       -webkit-transform-origin: 0% 20%;
+     }
+     .dock-container li:hover .acesso_rapido {
+          -moz-transform: scale(1.30);
+          -ms-transform: scale(1.30);
+          -webkit-transform: scale(1.30);
+          margin: 0 .3em;
+        }
+        .dock-container li:hover + li .acesso_rapido,
+        .dock-container li.prev .acesso_rapido {
+          -moz-transform: scale(1);
+          -ms-transform: scale(1);
+          -webkit-transform: scale(1);
+          margin: 0 .1em;
+        }
+
+@media screen and (max-width: 768px) {
+  .dock-container{
+      position: relative;
+      margin-bottom: -3%;
+
+  }
+
+  .dock-container li{
+      width: 4%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .dock-container{
+      position: relative;
+      margin-bottom: -3%;
+
+  }
+
+  .dock-container li{
+      width: 6%;
+  }
+}

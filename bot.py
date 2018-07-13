@@ -40,6 +40,8 @@ bot = ChatBot(
 )
 # bot.train('/home/rodrigo/sistemas/rodrigo/chat')
 bot.train('textos')
+bot.trainer.export_for_training('./my_export.json')
+
 # bot.train('chatterbot.corpus.leme')
 print('Bot:',bot.get_response('CHATBOT, GO'))
 logging.basicConfig(level=logging.INFO)

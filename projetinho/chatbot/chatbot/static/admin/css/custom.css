@@ -1,0 +1,41 @@
+input#id_demerito_1, input#id_demerito_2{
+	margin-top: 0px;
+}
+
+div#data .parsley-custom-error-message {
+    float: right;
+    width: 100%;
+    position: absolute;
+    margin: 33px 0 0 -5px;
+}
+
+div.tipo_lancamento{
+	margin-bottom: 20px;
+}
+
+div#selecionar_filtro{
+		position: relative;
+    display: inline-block;
+    width: 100%;
+		margin-bottom: 20px;
+}
+
+div#aplicar_valor_deme ul.parsley-errors-list{
+	position: absolute;
+    margin-top: -43px;
+}
+
+div#aplicar_valor_deme label.radio{
+	margin-bottom: 0px ;
+	margin-top: 20px;
+}
+
+
+@media (max-width: 768px){
+	.radio-inline+.radio-inline, .checkbox-inline+.checkbox-inline{
+		margin-left: 0px;
+	}
+	div#aplicar_valor_deme ul.parsley-errors-list{
+		margin-top: -65px;
+	}
+}
